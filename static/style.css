@@ -1,6 +1,4 @@
-.nav-wrapper {
-    background: #000;
-}
+/*------------------ Basic styling areas begins here ------------- */
 
 body {
     background: #fff;
@@ -8,3 +6,23 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
+
+/*------------------ Basic styling areas ends here ------------- */
+
+
+/*------------------ navbar begins here ------------- */
+
+.nav-wrapper {
+    background: #000;
+}
+
+
+.brand-logo {
+    margin-left: 20px;
+}
+
+.right {
+    margin-right: 20px;
+}
+
+/*------------------ navbar ends here ------------- */
