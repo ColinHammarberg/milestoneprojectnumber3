@@ -5,6 +5,8 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    width: 100%;
+    margin: 0;
 }
 
 /*------------------ Basic styling areas ends here ------------- */
@@ -26,3 +28,15 @@ body {
 }
 
 /*------------------ navbar ends here ------------- */
+
+/*------------------ landing image begins here ------------- */
+.parallax-container {
+    height: 750px;
+  }
+
+.parallax {
+    background-image: url("https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/09/psychodynamic-therapy-1296x728-headert-1024x575.jpg?w=1155&h=1528");
+}
+
+/*------------------ landing image ends here ------------- */
+
