@@ -17,6 +17,13 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 
+app.route("/")
+app.route("/love_therapy")
+def love_therapy():
+    therapy = list(mongo.db.therapy.find())
+    return render_template("lovetherapy.html", therapy=therapy)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
