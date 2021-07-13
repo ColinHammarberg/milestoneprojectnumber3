@@ -16,12 +16,15 @@ app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
+mongo = PyMongo(app)
 
-app.route("/")
-app.route("/love_therapy")
+
+@app.route("/")
+@app.route("/love_therapy")
 def love_therapy():
     therapy = list(mongo.db.therapy.find())
     return render_template("lovetherapy.html", therapy=therapy)
+
 
 
 if __name__ == "__main__":
