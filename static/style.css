@@ -65,5 +65,11 @@ body {
 
 /*------------------ Register page ends here ------------- */
 
-
-
+.page-footer {
+  background-color: #000;
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  width: 100%;
+  display: inline-block;
+}
