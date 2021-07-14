@@ -20,12 +20,13 @@ body {
 
 
 .brand-logo {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .right {
-    margin-right: 20px;
+    margin-right: 10px;
 }
+
 
 /*------------------ navbar ends here ------------- */
 
@@ -44,7 +45,18 @@ body {
 
 .header {
     margin-top: 80px;
+    text-decoration: underline;
   }
+
+.register {
+    margin-top: 80px;
+  }
+
+  @media(max-width: 768px) {
+    .header {
+        font-size: 20px;
+    }
+}
 
 /*------------------ Register page ends here ------------- */
 

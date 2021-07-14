@@ -3,6 +3,45 @@
 
 <h3 class="text-darken-4 center-align header">CREATE YOUR OWN ACCOUNT</h3>
 
+<div class="row register">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+        <div class="card-panel teal lighten-4">
+            <!-- username -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-plus prefix black-blue-text text-darken-4"></i>
+                    <input id="username" name="username" type="text" minlength="5"
+                        maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for="username">Username</label>
+                </div>
+            </div>
+            <!-- email -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-mail-bulk prefix black-text text-darken-4"></i>
+                    <input id="email" name="email" type="email" minlength="5"
+                          class="validate" required>
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <!-- passowrd -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-lock prefix black-blue-text text-darken-4"></i>
+                    <input id="password" name="password" type="password" minlength="5"
+                        maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <!-- register -->
+            <div class="row">
+                <button type="submit" class="col s12 btn-large black darken-4 text-shadow">
+                    Register <i class="fas fa-registered"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
 
 
 
