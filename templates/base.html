@@ -25,7 +25,7 @@
                 <li><a href="">Contact</a></li>
                 {% if session.user %}
                 <li><a href="">My Account</a></li>
-                <li><a href="#">Bookings</a></li>
+                <li><a href="{{ url_for('add_appointment') }}">Bookings</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
                 <li><a href="{{ url_for('register') }}">Register</a></li>
@@ -43,7 +43,7 @@
                 <li><a href="">Contact</a></li>
                 {% if session.user %}
                 <li><a href="">My Account</a></li>
-                <li><a href="#">Bookings</a></li>
+                <li><a href="{{ url_for('add_appointment') }}">Bookings</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
                 <li><a href="{{ url_for('register') }}">Register</a></li>

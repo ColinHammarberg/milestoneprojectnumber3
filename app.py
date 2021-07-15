@@ -95,6 +95,25 @@ def logout():
     session.pop("user")
     return redirect(url_for("signin"))
 
+@app.route("/add_appointment", methods=["GET", "POST"])
+def add_appointment():
+    if request.method == "POST":
+        priority = "on" if request.form.get("priority") else "off"
+        book = {
+            "meeting_type": request.form.get("meeting_type"),
+            "meeting_description": request.form.get("meeting_description"),
+            "priority": priority,
+            "requested_date": request.form.get("requested_date"),
+            "made_by": session["user"]
+        }
+        mongo.db.tasks.insert_one(appointments)
+        flash("Your requested therapy session has been registered")
+        return redirect(url_for("love_therapy"))
+
+        appointment = mongo.db.appointments.find().sort("meeting_type", 1)
+        return render_template("add_appointment.html", appointment=appointment)
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
