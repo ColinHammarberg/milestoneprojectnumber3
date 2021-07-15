@@ -25,18 +25,20 @@ def love_therapy():
     therapy = list(mongo.db.therapy.find())
     return render_template("lovetherapy.html", therapy=therapy)
 
-        # register function will create a user and add the user details into the database (Mongodb)
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
         # This check if the user already exists in the databse
         existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
-        
+            {"username": request.form.get("username").lower(),
+            "email": request.form.get("email").lower()})
+            
         if existing_user:
-            flash("Username already exists")
+            flash("Username or (and) email already exists")
             return redirect(url_for("register"))
+
+        
 
         register = {
             "username": request.form.get("username").lower(),
@@ -45,18 +47,18 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-        # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
+        return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")
 
-        # signin function will log in the user if it matches any of the users in the database
+
 
 @app.route("/signin", methods=["GET", "POST"])
 def signin():
     if request.method == "POST":
-        # app will check if username exists in the database
+        # check if username exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -68,19 +70,26 @@ def signin():
                         flash("Welcome, {}".format(
                             request.form.get("username")))
                         return redirect(url_for(
-                            "account", username=session["user"]))
+                            "love_therapy", username=session["user"]))
             else:
-                # Password doesn't match any user in the database
-                flash("Incorrect Username")
+                # invalid password match
+                flash("Incorrect Username and/or Password")
                 return redirect(url_for("signin"))
 
         else:
-            # username doesn't match any user in the database
-            flash("Incorrect Username")
+            # username doesn't exist
+            flash("Incorrect Username and/or Password")
             return redirect(url_for("signin"))
 
     return render_template("signin.html")
-            
+
+
+@app.route("/logout")
+def logout():
+    # remove user from session cookie
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("signin"))
 
 
 if __name__ == "__main__":
