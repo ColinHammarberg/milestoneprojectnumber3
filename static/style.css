@@ -39,7 +39,7 @@ body {
     background-image: url("https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/09/psychodynamic-therapy-1296x728-headert-1024x575.jpg?w=1155&h=1528");
 }
 
-/*------------------ landing image ends here ------------- */
+/*------------------ Landing image ends here ------------- */
 
 /*------------------ Register page begins here ------------- */
 
@@ -73,3 +73,21 @@ body {
   width: 100%;
   display: inline-block;
 }
+
+/*------------------ Flash messages begins here ------------- */
+
+.flashes {
+  margin: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 100px;
+}
+
+.message {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  height: 75px;
+  width: 100%;
+}
+/*------------------ Flash messages ends here ------------- */

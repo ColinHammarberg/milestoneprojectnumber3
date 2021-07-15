@@ -4,7 +4,7 @@
 <h3 class="text-darken-4 center-align header">LOG IN TO YOUR OWN ACCOUNT</h3>
 
 <div class="row register">
-    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('signin') }}">
         <div class="card-panel teal lighten-4">
             <!-- The username section -->
             <div class="row">
@@ -33,6 +33,15 @@
                     <label for="password">Password</label>
                 </div>
             </div>
+            <!-- button -->
+            <div class="row">
+                <button type="submit" class="col s12 btn-large black darken-4 text-shadow">
+                    Log In <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
 
 
 {% endblock %}

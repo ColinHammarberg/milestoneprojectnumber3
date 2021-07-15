@@ -40,6 +40,19 @@
         <!------- Mobile version & Ipad version navbar ends here ------->
 	</header>
 
+  <section>
+    <!-- flash messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="row flashes center-align">
+                    <h4 class="black white-text center-align message">{{ message }}</h4>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</section>
+
     <main>
       {% block content %}
       {% endblock %}
