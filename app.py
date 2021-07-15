@@ -68,7 +68,7 @@ def signin():
                         flash("Welcome, {}".format(
                             request.form.get("username")))
                         return redirect(url_for(
-                            "love_therapy", username=session["user"]))
+                            "account", username=session["user"]))
             else:
                 # Password doesn't match any user in the database
                 flash("Incorrect Username")
@@ -80,6 +80,7 @@ def signin():
             return redirect(url_for("signin"))
 
     return render_template("signin.html")
+            
 
 
 if __name__ == "__main__":

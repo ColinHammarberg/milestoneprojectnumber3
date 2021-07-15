@@ -20,10 +20,20 @@
               <a href="{{ url_for('love_therapy') }}" class="brand-logo">Love Therapy</a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
               <ul class="right hide-on-med-and-down">
-                <li><a href="{{ url_for('register') }}">Register</a></li>
-                <li><a href="{{ url_for('signin') }}">Log-In</a></li>
+                <li><a href="{{ url_for('love_therapy') }}">Home</a></li>
                 <li><a href="">About Us</a></li>
                 <li><a href="">Contact</a></li>
+                {% if session.user %}
+                <li><a href="{{ url_for('account') }}">My Account</a></li>
+                {% if session.user|lower == "admin"|lower %}
+                <li><a href="#">Bookings</a></li>
+                {% endif %}
+                <li><a href="#">Log Out</a></li>
+                {% else %}
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+                <li><a href="{{ url_for('signin') }}">Log-In</a></li>
+                {% endif %}
+                
               </ul>
             </div>
           </nav>
@@ -31,11 +41,19 @@
 
         <!------- Mobile version & Ipad version navbar begins here (Inspired from Materializecss.com) ------->
           <ul class="sidenav center-align" id="mobile-demo">
-                <li><a href="{{ url_for('love_therapy') }}">Home</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
-                <li><a href="{{ url_for('signin') }}">Log-In</a></li>
+            <li><a href="{{ url_for('love_therapy') }}">Home</a></li>
                 <li><a href="">About Us</a></li>
                 <li><a href="">Contact</a></li>
+                {% if session.user %}
+                <li><a href="{{ url_for('account') }}">My Account</a></li>
+                {% if session.user|lower == "admin"|lower %}
+                <li><a href="#">Bookings</a></li>
+                {% endif %}
+                <li><a href="#">Log Out</a></li>
+                {% else %}
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+                <li><a href="{{ url_for('signin') }}">Log-In</a></li>
+                {% endif %}
             </ul>
         <!------- Mobile version & Ipad version navbar ends here ------->
 	</header>
