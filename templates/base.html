@@ -24,16 +24,13 @@
                 <li><a href="">About Us</a></li>
                 <li><a href="">Contact</a></li>
                 {% if session.user %}
-                <li><a href="">profile</a></li>
-                {% if session.user|lower == "admin"|lower %}
+                <li><a href="">My Account</a></li>
                 <li><a href="#">Bookings</a></li>
-                {% endif %}
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
                 <li><a href="{{ url_for('register') }}">Register</a></li>
                 <li><a href="{{ url_for('signin') }}">Log-In</a></li>
                 {% endif %}
-                
               </ul>
             </div>
           </nav>
@@ -46,9 +43,7 @@
                 <li><a href="">Contact</a></li>
                 {% if session.user %}
                 <li><a href="">My Account</a></li>
-                {% if session.user|lower == "admin"|lower %}
                 <li><a href="#">Bookings</a></li>
-                {% endif %}
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
                 <li><a href="{{ url_for('register') }}">Register</a></li>
