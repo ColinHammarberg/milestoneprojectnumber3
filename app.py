@@ -88,7 +88,7 @@ def signin():
             return redirect(url_for("signin"))
 
 
-    return render_template("profile.html")
+    return render_template("signin.html")
 
 
 @app.route("/logout")

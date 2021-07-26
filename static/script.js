@@ -10,7 +10,7 @@ $(document).ready(function () {
       showClearBtn: true,
       i18n: {
           done: "Select"
-     )
+        }
   });
 
 $(document).ready(function(){
@@ -18,8 +18,8 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  $('select').formSelect();
-});
+    $('select').formSelect();
+  });
 
 validateMaterializeSelect();
     function validateMaterializeSelect() {
