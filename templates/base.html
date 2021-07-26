@@ -58,28 +58,23 @@
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
-                <div class="row flashes center-align">
-                    <div class="col m4 center-align">
-                      <div class="card">
-                        <div class="card-image">
-                          <img src="https://www.clipartkey.com/mpngs/m/5-57313_thumbs-up-emoji-png-transparent-emoticon-png.png">
-                          <span class="card-title"></span>
-                        </div>
+            <div class="row flashes center-align">
+              <div class="container-fluid col s12 center-align">
+                <div class="card center-align">
                         <div class="card-content">
                           <h5>{{ message }}</h5>
                         </div>
                         <div class="row">
                           <div class="col s12 center-align">
-                              <button type="submit" class="btn-large black text-white text-shadow" href="{{ url_for('love_therapy') }}">
-                                 Return
-                              </button>
+                            <a href="{{ url_for('love_therapy') }}" class="btn-large black text-white">
+                              Return 
+                          </a>
                           </div>
                       </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
             {% endfor %}
         {% endif %}
     {% endwith %}
