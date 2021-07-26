@@ -2,6 +2,85 @@
 {% block content %}
 
 
+<h3 class="text-black center-align">Request A Meeting</h3>
+
+<div class="row card-panel grey lighten-5">
+    <!-- form tags begins here-->
+    <form class="col s12" method="POST" action="{{ url_for('add_appointment') }}">
+        <!-- Meeting type text input begins here-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-comment-medical prefix text-black"></i>
+                    <select id="meeting_type" name="meeting_type" required>
+                      <option value="" disabled selected>Choose your option</option>
+                      <option value="CBT Therapy">CBT Therapy</option>
+                      <option value="Couple Therapy">Couple Therapy</option>
+                      <option value="Group Therapy">Group Therapy</option>
+                      <option value="Substance Abuse">Substance Abuse</option>
+                      <option value="Psychiatrist">Psychiatrist</option>
+                    </select>
+                    <label>Who would you like to see?</label>
+                  </div>
+            </div>
+        
+        <!-- Meeting type text input ends here -->
+        
+        <!-- meeting description text input begins here-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-headset prefix text-black"></i>
+                <textarea id="meeting_description" name="meeting_description" minlength="5"
+                    maxlength="200" class="materialize-textarea validate" required></textarea>
+                <label for="meeting_description">What would you like to discuss on your meeting?</label>
+            </div>
+        </div>
+        <!-- meeting description text input ends here-->
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-question-circle prefix text-black"></i>
+                <textarea id="meeting_reflection" name="meeting_reflection" minlength="5"
+                    maxlength="200" class="materialize-textarea validate" required></textarea>
+                <label for="meeting_reflection">Why would you like to discuss this?</label>
+            </div>
+        </div>
+
+        <!-- requested date selections begins here -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-calendar-alt prefix text-black"></i>
+                <input id="requested_date" name="requested_date" type="text" class="datepicker validate"  required>
+                <label for="requested_date">Which date would you prefer having your meeting on?</label>
+            </div>
+        </div>
+<!-- requested date selections ends here --> 
+
+        <div class="row">
+            <div class="input-field col s12">
+            <div class="switch">
+                <label for="digital_meeting">
+                <input type="checkbox" id="digital_meeting" name="digital_meeting">
+                <span class="lever"></span>
+                Would you like to have the meeting digitally?
+            </label>
+            </div>
+        </div>
+    </div>
+
+        <!-- submit button begins here -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large black text-white text-shadow">
+                   Send Meeting Request <i class="fas fa-plus-square right"></i>
+                </button>
+            </div>
+        </div>
+        <!-- submit button ends here -->
+
+    </form>
+
+    <!-- form tags ends here-->
+</div>
 
 
 {% endblock %}
