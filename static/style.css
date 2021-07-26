@@ -81,7 +81,7 @@ body {
   margin-top: 50px;
   margin-bottom: 50px;
   height: 100px;
-  width: 50%;
+  width: 100%;
   text-align: center;
 }
 
@@ -92,4 +92,19 @@ body {
   height: 75px;
   width: 100%;
 }
+
+.card-content {
+  text-align: center;
+}
+
+button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.return-btn a {
+  color: #fff;
+}
+
+
 /*------------------ Flash messages ends here ------------- */
