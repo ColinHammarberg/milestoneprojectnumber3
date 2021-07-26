@@ -73,19 +73,22 @@ def signin():
                         session["user"] = request.form.get("username").lower()
                         flash("Welcome, {}".format(
                             request.form.get("username")))
+                            
                         return redirect(url_for(
                             "love_therapy", username=session["user"]))
+
             else:
-                # invalid password match
+                # The choosen password does not exist (function)
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("signin"))
 
         else:
-            # username doesn't exist
+            # The choosen username does not exist (function)
             flash("Incorrect Username and/or Password")
             return redirect(url_for("signin"))
 
-    return render_template("signin.html")
+
+    return render_template("profile.html")
 
 
 @app.route("/logout")
@@ -112,6 +115,17 @@ def add_appointment():
         return redirect(url_for("love_therapy"))
 
     return render_template("add_appointment.html")
+
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    # The application will find the username from the mongo database
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+
+    if session["user"]:
+        return render_template("profile.html", username=username)
+
+    return redirect(url_for("signin"))
 
 
 

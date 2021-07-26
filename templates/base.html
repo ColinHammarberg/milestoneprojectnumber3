@@ -24,7 +24,7 @@
                 <li><a href="">About Us</a></li>
                 <li><a href="">Contact</a></li>
                 {% if session.user %}
-                <li><a href="">My Account</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">My Account</a></li>
                 <li><a href="{{ url_for('add_appointment') }}">Bookings</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
@@ -42,7 +42,7 @@
                 <li><a href="">About Us</a></li>
                 <li><a href="">Contact</a></li>
                 {% if session.user %}
-                <li><a href="">My Account</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">My Account</a></li>
                 <li><a href="{{ url_for('add_appointment') }}">Bookings</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
@@ -60,7 +60,7 @@
             {% for message in messages %}
             <div class="row flashes center-align">
               <div class="container-fluid col s12 center-align">
-                <div class="card center-align">
+                <div class="center-align">
                         <div class="card-content">
                           <h5>{{ message }}</h5>
                         </div>

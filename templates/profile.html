@@ -1,7 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
-{{ username }}'s Profile
+
+<div class="card center-align">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator center-align" src="https://www.sketchappsources.com/resources/source-image/profile-illustration-gunaldi-yunus.png">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{ username }}<i class="fas fa-bars right"></i></span>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">{{ username }}<i class="fas fa-bars right"></i></span>
+      <ul class="card-menu">
+          <li><a href="{{ url_for('add_appointment') }}">Schedule A Meeting</a></li>
+          <li><a href="#">Contact Love Therapy</a></li>
+          <li><a href="#">Search Content</a></li>
+          <li><a href="#">Delete My Account</a></li>
+      </ul>
+    </div>
+  </div>
 
 
 {% endblock %}
