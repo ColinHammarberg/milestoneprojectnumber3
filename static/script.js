@@ -21,6 +21,10 @@ $(document).ready(function(){
     $('select').formSelect();
   });
 
+$(document).ready(function(){
+    $('.parallax').parallax();
+  });
+
 validateMaterializeSelect();
     function validateMaterializeSelect() {
         let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
@@ -49,6 +53,17 @@ validateMaterializeSelect();
         });
     }
 });
+
+
+var instance = M.Parallax.getInstance(elem);
+
+/* jQuery Method Calls
+  You can still use the old jQuery plugin method calls.
+  But you won't be able to access instance properties.
+
+  $('.parallax').parallax('methodName');
+  $('.parallax').parallax('methodName', paramName);
+*/
 
 
 
