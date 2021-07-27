@@ -158,9 +158,7 @@ def terms():
 def delete_user(user_id):
     mongo.db.users.remove({"_id": ObjectId(user_id)})
     flash("Your account has successfully been deleted")
-    return redirect(url_for("delete"))
-
-    return render_template("register.html")
+    return redirect(url_for("register"))
 
 
 
