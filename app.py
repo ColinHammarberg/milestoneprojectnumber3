@@ -110,7 +110,7 @@ def add_appointment():
             "digital_meeting": digital_meeting,
             "made_by": session["user"]
         }
-        mongo.db.book.insert_one(appointments)
+        mongo.db.appointments.insert_one(appointments)
         flash("Your requested therapy session has been registered")
         return redirect(url_for("love_therapy"))
 
@@ -126,6 +126,21 @@ def profile(username):
         return render_template("profile.html", username=username)
 
     return redirect(url_for("signin"))
+
+@app.route("/contact", methods=["GET", "POST"])
+def contact():
+    if request.method == "POST":
+        emails = {
+            "email": request.form.get("email"),
+            "phone": request.form.get("phone"),
+            "message": request.form.get("message"),
+            "made_by": session["user"]
+        }
+        mongo.db.emails.insert_one(emails)
+        flash("Your email was successfully sent")
+        return redirect(url_for("love_therapy"))
+
+    return render_template("contact.html")
 
 
 

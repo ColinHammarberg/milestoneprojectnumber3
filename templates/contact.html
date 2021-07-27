@@ -1,7 +1,111 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3 class="text-black center-align">Contact Us Directly</h3>
+<div class="row">
+<div class="col s12 request-header center-align">
+    <p class="center-align">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non assumenda earum labore reprehenderit, beatae quia perspiciatis tempore natus! Sapiente porro, praesentium recusandae velit inventore natus sunt ex delectus deleniti. <br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam atque sapiente error laboriosam corrupti dolore, ab eos voluptas nemo aliquam illum ipsum quisquam quidem impedit sequi ad consectetur. Quibusdam, quod.
+    </p>
+</div>
+</div>
 
+<div class="row card-panel grey lighten-5">
+    <!-- form tags begins here-->
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('contact') }}">
+        <div class="card-panel teal lighten-4">
+        <!-- Meeting type text input begins here-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-bell prefix"></i>
+                    <select id="meeting_type" name="meeting_type" required>
+                      <option value="" disabled selected>Subject</option>
+                      <option value="Bookings">Bookings</option>
+                      <option value="Information">Information</option>
+                      <option value="General Questions?">General Questions?</option>
+                    </select>
+                    <label>What subject should your email carry?</label>
+                  </div>
+            </div>
+        
+        <!-- Email address input begins here -->
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-envelope-open-text prefix"></i>
+                <textarea id="email" name="email" type="email" class="materialize-textarea validate" required></textarea>
+                <label for="email">Email</label>
+            </div>
+        </div>
+
+        <!-- Email address input ends here -->
+
+        <!-- Phone number (optional) input begins here -->
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-phone-square-alt prefix"></i>
+                <textarea id="phone" name="phone" minlength="5"
+                     class="materialize-textarea validate"></textarea>
+                <label for="phone">Phone Number (optional)</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-inbox prefix"></i>
+                <textarea id="message" name="message" minlength="5"
+                    maxlength="1000" class="materialize-textarea validate" required></textarea>
+                <label for="message">Message</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <div class="switch">
+                    <label for="agree_terms" class="validate" required>
+                        <input type="checkbox" id="agree_terms" name="agree_terms" class="black" required>
+                        <span class="lever"></span>
+                        <a href="#" class="terms">I agree to the terms & condition</a>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- submit button begins here -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large black text-white text-shadow">
+                   Send <i class="fas fa-plus-square right"></i>
+                </button>
+            </div>
+        </div>
+        <!-- submit button ends here -->
+
+    </form>
+  </div>
+
+    <!-- form tags ends here-->
+</div>
+<footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Love Therapy</h5>
+          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus sunt similique assumenda in iure delectus</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h6 class="white-text">We do not have any social media channels<b>.</b> <br>
+            Because we do not like the channels that are offered today<b>.</b></h6>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2021 Copyright Text
+      </div>
+    </div>
+  </footer>
 
 
 {% endblock %}

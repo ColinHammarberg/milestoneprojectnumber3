@@ -22,7 +22,7 @@
               <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('love_therapy') }}">Home</a></li>
                 <li><a href="">About Us</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
                 {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">My Account</a></li>
                 <li><a href="{{ url_for('add_appointment') }}">Bookings</a></li>
@@ -40,7 +40,7 @@
           <ul class="sidenav center-align" id="mobile-demo">
             <li><a href="{{ url_for('love_therapy') }}">Home</a></li>
                 <li><a href="">About Us</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
                 {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">My Account</a></li>
                 <li><a href="{{ url_for('add_appointment') }}">Bookings</a></li>
