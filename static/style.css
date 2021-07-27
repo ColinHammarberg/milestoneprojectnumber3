@@ -33,11 +33,11 @@ body {
 /*------------------ landing image begins here ------------- */
 
 .img-1 {
-    background-image: url("https://themighty.com/wp-content/uploads/2017/07/ThinkstockPhotos-628317416-1280x640.jpg");
+    background-image: url("https://cdn.dribbble.com/users/388048/screenshots/2303293/therapist.gif");
 }
 
 .img-2 {
-  background-image: url("https://themighty.com/wp-content/uploads/2017/07/ThinkstockPhotos-628317416-1280x640.jpg");
+  background-image: url("https://cdn.dribbble.com/users/388048/screenshots/2303293/therapist.gif");
 }
 
 
@@ -196,6 +196,23 @@ li {
   color: #000;
 }
 
-
-
 /*------------------ Profile page ends here ------------- */
+
+/*------------------ Terms & Condition page begins here ------------- */
+
+.terms-h3 {
+  padding-top: 40px;
+}
+
+.terms-paragragh {
+  padding-top: 25px;
+}
+
+.terms-pargragh-2 {
+  padding-top: 25px;
+}
+
+
+/*------------------ Terms & Condition page ends here ------------- */
+
+

@@ -143,6 +143,17 @@ def contact():
     return render_template("contact.html")
 
 
+    # Activates the button to bring the user/client to the terms & condition page
+
+@app.route("/terms", methods=["GET", "POST"])
+def terms():
+    if request.method == "POST":
+        return redirect(url_for("terms"))
+
+    return render_template("terms.html")
+
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
