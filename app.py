@@ -152,13 +152,15 @@ def terms():
 
     return render_template("terms.html")
 
-        # Deletes the user from the database
+    # Deletes the user from the database
 
 @app.route("/delete_user/<user_id>")
 def delete_user(user_id):
     mongo.db.users.remove({"_id": ObjectId(user_id)})
     flash("Your account has successfully been deleted")
-    return redirect(url_for("register"))
+    return redirect(url_for("delete"))
+
+    return render_template("delete.html")
 
 
 

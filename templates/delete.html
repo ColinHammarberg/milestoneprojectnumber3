@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="text-black center-align">Delete Your Account</h3>
+<div class="row">
+<div class="col s12 request-header center-align">
+    <p class="center-align">Please fill in your details and press the button below.
+    </p>
+</div>
+</div>
+
+<div class="row card-panel grey lighten-5">
+    <!-- form tags begins here-->
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('delete') }}">
+        <div class="card-panel teal lighten-4">    
+        <!-- Email address input begins here -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-envelope-open-text prefix"></i>
+                <textarea id="username" name="username" type="text" class="materialize-textarea validate" required></textarea>
+                <label for="username">Username</label>
+            </div>
+        </div>
+
+        <!-- Email address input ends here -->
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-user-lock prefix black-blue-text text-darken-4"></i>
+                <input id="password" name="password" type="password" minlength="5"
+                    maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                <label for="password">Password</label>
+            </div>
+        </div>
+
+        <!-- submit button begins here -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large black text-white text-shadow">
+                <a href="{{ url_for('delete', user_id=user._id) }}">Delete My Account</a></button>
+            </div>
+        </div>
+        <!-- submit button ends here -->
+
+    </form>
+  </div>
+
+    <!-- form tags ends here-->
+</div>
+<footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Love Therapy</h5>
+          <p class="grey-text text-lighten-4">Love Therapy is the official application for "Improvement Therapy & Psychiatrist Centre". <br>
+            If you would like to read more about us, then please <a href="#">press here.</a>
+        </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h6 class="white-text">We do not have any social media channels<b>.</b> <br>
+            Because we do not like the channels that are offered today<b>.</b></h6>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2021 Copyright Text
+      </div>
+    </div>
+  </footer>
+
+  {% endblock %}
