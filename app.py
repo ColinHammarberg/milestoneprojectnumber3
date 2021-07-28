@@ -173,9 +173,16 @@ def terms():
 @app.route("/delete_user/<user_id>")
 def delete_user(user_id):
     mongo.db.users.remove({"_id": ObjectId(user_id)})
-    flash("You have successfully deleted your account")
+    flash("We are sad to see you leave, but you have successfully deleted your account")
     return redirect(url_for("register"))
-    return render_template("delete.html")
+
+    # Deletes appointment/booking from the database
+
+@app.route("/delete_appointment/<appointments_id>")
+def delete_appointment(appointments_id):
+    mongo.db.appointments.remove({"_id": ObjectId(appointments_id)})
+    flash("Your booking has been cancelled")
+    return redirect(url_for("add_appointment"))
 
         
 if __name__ == "__main__":
