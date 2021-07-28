@@ -133,11 +133,11 @@ def add_appointment():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+    user = mongo.db.users.find_one(
+        {"username": session["user"]})
 
-    if session["user"]:
-        return render_template("profile.html", username=username)
+    if 'user' in session:
+        return render_template("profile.html", username=user['username'], user=user)
 
     return redirect(url_for("signin"))
 
@@ -174,8 +174,9 @@ def terms():
 def delete_user(user_id):
     mongo.db.users.remove({"_id": ObjectId(user_id)})
     flash("You have successfully deleted your account")
-    return redirect(url_for("love_therapy"))
-        
+    return redirect(url_for("delete_user"))
+    return render_template("profile.html")
+
 
         
 if __name__ == "__main__":
