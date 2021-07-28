@@ -93,13 +93,14 @@ def signin():
 
 # Viewing your own bookings (function)
 
-@app.route("/appointments", methods=["GET"])
+@app.route("/appointments/", methods=["GET"])
 def user_appointments():
     if request.method == "GET":
         appointments = list(mongo.db.appointments.find())
         return render_template("appointments.html", appointments=appointments)
 
 
+# Logs out the user (function)
 
 @app.route("/logout")
 def logout():
@@ -107,6 +108,8 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("signin"))
+
+# Lets the user/client schedule a meeting (function)
 
 @app.route("/add_appointment", methods=["GET", "POST"])
 def add_appointment():
@@ -138,6 +141,8 @@ def profile(username):
 
     return redirect(url_for("signin"))
 
+    # Lets the user/client contact and registers the email sent (by the form) directly into the database (function)
+
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
@@ -168,13 +173,11 @@ def terms():
 @app.route("/delete_user/<user_id>")
 def delete_user(user_id):
     mongo.db.users.remove({"_id": ObjectId(user_id)})
-    flash("Your account has successfully been deleted")
-    return redirect(url_for("delete"))
+    flash("You have successfully deleted your account")
+    return redirect(url_for("love_therapy"))
+        
 
-    return render_template("delete.html")
-
-
-
+        
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

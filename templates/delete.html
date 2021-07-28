@@ -9,9 +9,10 @@
 </div>
 </div>
 
+
 <div class="row card-panel grey lighten-5">
     <!-- form tags begins here-->
-    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('delete') }}">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('delete', user_id=user._id) }}">
         <div class="card-panel teal lighten-4">    
         <!-- Email address input begins here -->
         <div class="row">
