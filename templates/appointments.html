@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Hello</h1>
+
+<ul class="collapsible">
+    {% for appointment in appointments %}
+    <li>
+        {{ appointment.made_by }}    </li>
+    {% endfor %}
+</ul>
+
+
+
+{% endblock %}

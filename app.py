@@ -91,6 +91,14 @@ def signin():
     return render_template("signin.html")
 
 
+@app.route("/appointments", methods=["GET"])
+def user_appointments():
+    if request.method == "GET":
+        appointments = mongo.db.appointments.find({"made_by": session["user"]})
+        return render_template("appointments.html", appointments=appointments)
+
+
+
 @app.route("/logout")
 def logout():
     # remove user from session cookie
