@@ -1,15 +1,45 @@
 {% extends "base.html" %}
 {% block content %}
-
-<h1>Hello</h1>
-
-<ul class="collapsible">
-    {% for appointment in appointments %}
-    <li>
-        {{ appointment.made_by }}    </li>
-    {% endfor %}
-</ul>
-
+<div class="col s12 m4">
+<div class="row">
+<h3 class="text-black center-align booking-header">My Bookings</h3>
+<p class="text-black center-align booking-paragragh">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla itaque recusandae aspernatur quisquam pariatur quae consequuntur beatae nesciunt, veritatis laboriosam porro asperiores quasi dolorum repellendus. Nobis, id alias. Magnam, animi!<br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, necessitatibus veniam magnam assumenda provident quam mollitia asperiores repellat esse blanditiis quibusdam laborum omnis. Facilis itaque officia odio, iste quasi impedit.
+</p>
+</div>
+</div>
 
 
-{% endblock %}
+    <div class="container">
+    <div class="row card-panel grey lighten-5">
+        <form action="{{ url_for('user_appointments') }}" method="post" class="col s12">
+            
+        
+        <div class="card-panel teal lighten-4">
+    <ul class="collapsible">
+        {% for appointment in appointments %}
+        <li>
+            <div class="collapsible-header white-text black darken-4 text-shadow">
+                <div class="col s3">
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="col s9">
+                    <strong>{{ appointment.requested_date }}</strong> : {{ appointment.meeting_type }}
+                </div>
+            </div>
+            <div class="collapsible-body">
+                <strong><b>{{ appointment.meeting_type }}</b></strong>
+                <p>Meeting topic: <strong><b>{{ appointment.meeting_description }}</b></strong></p>
+                <p>Is this a digital meeting? <strong><b>{{ appointment.digital_meeting }}</b></strong></p>
+                <a href="{{ url_for('user_appointments') }}" class="orange btn text-shadow">Edit</a>
+                <a href="{{ url_for('user_appointments') }}" class="red btn text-shadow">Cancel</a>
+            </div>
+        </li>
+        {% endfor %}
+        {% endblock %}
+    </ul>
+</form>
+</div>
+</div>
+</div>
+

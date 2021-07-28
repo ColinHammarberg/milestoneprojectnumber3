@@ -91,10 +91,12 @@ def signin():
     return render_template("signin.html")
 
 
+# Viewing your own bookings (function)
+
 @app.route("/appointments", methods=["GET"])
 def user_appointments():
     if request.method == "GET":
-        appointments = mongo.db.appointments.find({"made_by": session["user"]})
+        appointments = list(mongo.db.appointments.find())
         return render_template("appointments.html", appointments=appointments)
 
 
@@ -124,9 +126,10 @@ def add_appointment():
 
     return render_template("add_appointment.html")
 
+    # The application will find the username from the mongo database
+
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # The application will find the username from the mongo database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
