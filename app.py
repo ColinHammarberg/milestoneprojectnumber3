@@ -174,15 +174,16 @@ def terms():
 def delete_user(user_id):
     mongo.db.users.remove({"_id": ObjectId(user_id)})
     flash("We are sad to see you leave, but you have successfully deleted your account")
+    session.pop("user")
     return redirect(url_for("register"))
 
-    # Deletes appointment/booking from the database
+    # Deletes appointment/booking from the database (Not yet completed)
 
 @app.route("/delete_appointment/<appointments_id>")
 def delete_appointment(appointments_id):
     mongo.db.appointments.remove({"_id": ObjectId(appointments_id)})
     flash("Your booking has been cancelled")
-    return redirect(url_for("add_appointment"))
+    return redirect(url_for("delete_appointment"))
 
         
 if __name__ == "__main__":

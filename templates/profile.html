@@ -13,11 +13,32 @@
       <span class="card-title grey-text text-darken-4">{{ username }}<i class="fas fa-bars right"></i></span>
         <ul class="card-menu">
           <li class="menu-points"><a href="{{ url_for('add_appointment') }}">Booking</a></li>
-          <li class="menu-points"><a href="#">Contact</a></li>
+          <li class="menu-points"><a href="{{ url_for('contact') }}">Contact</a></li>
           <li class="menu-points"><a href="#">Content</a></li>
           <li class="menu-points"><a href="{{ url_for('delete_user', user_id=user._id) }}">Delete My Account</a></li>
       </ul>
     </div>
   </div>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Love Therapy</h5>
+          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus sunt similique assumenda in iure delectus</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h6 class="white-text">We do not have any social media channels<b>.</b> <br>
+            Because we do not like the channels that are offered today<b>.</b></h6>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2021 Copyright Text
+      </div>
+    </div>
+  </footer>
+
 
   {% endblock %}

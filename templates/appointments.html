@@ -31,7 +31,7 @@
                 <p>Meeting topic: <strong><b>{{ appointment.meeting_description }}</b></strong></p>
                 <p>Is this a digital meeting? <strong><b>{{ appointment.digital_meeting }}</b></strong></p>
                 <a href="{{ url_for('user_appointments') }}" class="orange btn text-shadow">Edit</a>
-                <a href="{{ url_for('delete_appointment', appointments_id=appointments._id) }}" class="red btn text-shadow">Cancel</a>
+                <a href="{{ url_for('delete_appointment', appointments_id=appointments._id) }}" class="btn light-blue lighten-1">Delete</a>
             </div>
         </li>
         {% endfor %}
