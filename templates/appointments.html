@@ -13,8 +13,8 @@
         <form action="{{ url_for('user_appointments') }}" method="post" class="col s12">
             
         <div class="card-panel white black-text lighten-4">
+        {% if appointment|length > 0 %}
     <ul class="collapsible">
-
         {% for appointment in appointments %}
         <li>
           {% if session.user|lower == appointments.made_by|lower %}
@@ -37,11 +37,13 @@
         {% endif %}
         {% endfor %}
     </ul>
-   
+    {% else %}
+        <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
+    {% endif %}
+</div>
+</div>
+</div>
 </form>
-</div>
-</div>
-</div>
 
 <footer class="page-footer">
     <div class="container">
