@@ -203,7 +203,7 @@ def edit_appointment(appointment_id):
         flash("You have successfully updated your booking. Your therapist will contact you shortly.")
 
     appointment = mongo.db.appointments.find_one({"_id": ObjectId(appointment_id)})
-    return render_template("edit_appointment.html", appointments=appointments)
+    return render_template("edit_appointment.html", appointment=appointment)
 
 
         
