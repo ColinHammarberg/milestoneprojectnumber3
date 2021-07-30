@@ -1,5 +1,71 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="container">
+    <div class="row card-panel grey lighten-5">
+        <!-- form tags begins here-->
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_appointment', appointment_id=appointment._id) }}">
+            <div class="card-panel teal lighten-4">
+            <!-- Meeting type text input begins here-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-comment-medical prefix text-black"></i>
+                        <select id="meeting_type" name="meeting_type" required>
+                          <option value="" disabled selected>Choose Session</option>
+                          <option value="CBT Therapy">CBT Therapy</option>
+                          <option value="Couple Therapy">Couple Therapy</option>
+                          <option value="Group Therapy">Group Therapy</option>
+                          <option value="Substance Abuse">Substance Abuse</option>
+                          <option value="Psychiatrist">Psychiatrist</option>
+                        </select>
+                        <label>Who would you like to see?</label>
+                      </div>
+                </div>
+    
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-headset prefix text-black"></i>
+                        <textarea id="meeting_description" name="meeting_description" minlength="5"
+                            maxlength="200" value="{{ appointments.meeting_description }}" class="materialize-textarea validate" required></textarea>
+                        <label for="meeting_description">What would you like to discuss on your meeting?</label>
+                    </div>
+                </div>
+    
+                <!-- task description -->
+    
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-question-circle prefix text-black"></i>
+                        <textarea id="meeting_reflection" name="meeting_reflection" minlength="5"
+                            maxlength="200" class="materialize-textarea validate" required>{{- appointments.meeting_reflection -}}</textarea>
+                        <label for="meeting_reflection">Why would you like to discuss this?</label>
+                    </div>
+                </div>
+    
+                <!-- due date picker -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                        <input id="requested_date" name="requested_date" type="text"
+                            value="{{ appointments.requested_date }}" class="datepicker validate" required>
+                        <label for="requested_date">Requested date</label>
+                    </div>
+                </div>
+                <!-- is urgent toggle -->
+                
+                <!-- submit button -->
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <!-- cancel button -->
+                        <a href="#" class="btn-large red text-shadow">
+                            Cancel <i class="fas fa-times-circle right"></i>
+                        </a>
+                        <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                            Edit<i class="fas fa-edit right"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
 
 {% endblock %}

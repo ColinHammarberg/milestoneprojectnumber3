@@ -179,13 +179,31 @@ def delete_user(user_id):
 
     # Deletes appointment/booking from the database (Not yet completed)
 
-@app.route("/delete_appointment/<appointments_id>")
-def delete_appointment(appointments_id):
-    mongo.db.appointments.remove({"_id": ObjectId(appointments_id)})
+@app.route("/delete_appointment/<appointment_id>")
+def delete_appointment(appointment_id):
+    mongo.db.appointments.remove({"_id": ObjectId(appointment_id)})
     flash("Your booking has been cancelled")
-    return redirect(url_for("love_therapy"))
+    return redirect(url_for("register"))
 
-    # The user/client should be able to change his booking (24 hours before the set time/date)
+    # The user/client should be able to change his booking (24 hours before
+    #  the set time/date)
+
+@app.route("/edit_appointment/<appointment_id>", methods=["GET", "POST"])
+def edit_appointment(appointment_id):
+    if request.method == "POST":
+        submit = {
+            "meeting_type": request.form.get("meeting_type"),
+            "meeting_description": request.form.get("meeting_description"),
+            "meeting_reflection": request.form.get("meeting_reflection"),
+            "requested_date": request.form.get("requested_date"),
+            "digital_meeting": digital_meeting,
+            "made_by": session["user"]
+        }
+        mongo.db.appointments.update({"_id": ObjectId(appointment_id)}, submit)    
+        flash("You have successfully updated your booking. Your therapist will contact you shortly.")
+
+    edit_appointment = mongo.db.appointments.find_one({"_id": ObjectId(appointment_id)})
+    return render_template("edit_appointment.html", edit_appointment=edit_appointment)
 
 
         
