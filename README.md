@@ -16,5 +16,44 @@
 
 # REASONS FOR DEVELOPMENT
 
-### I (Colin Hammarberg) am developing/building this application for the therapist and the society circulating around it. Currently therapist and psychotrists centers usually offer a very limited and difficult structure for their clients. Especially in the smaller cities all around the world. I am one of those people who feel that the structure could improve a lot with the therapists and psychotrists. 
+### I (Colin Hammarberg) am developing/building this application for the therapist and the society circulating around it. Currently therapist and psychotrists centers usually offer a very limited and difficult structure for their clients. Especially in the smaller cities all around the world. I am one of those people who feel that the structure could improve a lot with the therapists and psychotrists. All communication, booking, feedback and content are today handled through email and a piece of physical paper. This application will help the clients of "Improvement Therapy & Psychiatrist Centre" to receive a better and functional structure. At least I will be using it with my therapist instead of emailing back and fourth all the time. 
+
+# TECHNOLOGIES USED 
+ 
+### HTML
+* The project uses HTML to get the content visual. The developer has been using HTML in all visual pages.
+ 
+### CSS
+* The project uses CSS to design all pages. I have put a lot of energy on the design and still am. I prefer to use external CSS, instead of internal CSS to achive a "better" code.
+
+### JavaScript
+* The project uses Javascript. I have had minor difficulties with Javascript, but I think that so far it have turned our pretty well.
+
+### jQuery 
+* The project uses jQuery. I have added quite a lot of jQuery (but mostly the same code on all pages to receive an even functionality). 
+
+### PYTHON
+* The project uses Python to build the actual application and its functionalities.
+ 
+### FRAMEWORK
+* The project uses MaterializeCSS, to achive a very well functioning framework, responsiveness and helpful tools/classes/grids. 
+
+### FLASK
+* The project uses Flask framework.
+
+### MONGODB
+* The project uses Mongo Database to store data and also display data to the users/clients.
+ 
+### LANGUAGES
+* The project uses English as its standard language and an Lang=”en” attribute has also been implemented.
+
+# WIREFRAMES
+
+# FEATURES
+
+### All of the pages have been created with a mix of HTML, CSS, Javascript, jQuery and Python etc. This is shown very clearly, due to that it is a flask and python application. Clients to Improvement Therapy & Psychiatrist Centre are able to book meetings, add comments to what they would like to talk about on the next meeting, visualize a schedule with a drop-down menu which shows their next meetings, contact the centre, search up important information about mental illness etc. 
+
+## Existing Features
+
+
 
