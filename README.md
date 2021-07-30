@@ -14,4 +14,7 @@
 <a href="" target="_blank"><img src="/documentation/Ipad.png" alt="Book Bites mobile Screen"></a>
 <a href="" target="_blank"><img src="/documentation/Mobile.png" alt="Book Bites mobile Screen"></a>
 
+# REASONS FOR DEVELOPMENT
+
+### I (Colin Hammarberg) am developing/building this application for the therapist and the society circulating around it. Currently therapist and psychotrists centers usually offer a very limited and difficult structure for their clients. Especially in the smaller cities all around the world. I am one of those people who feel that the structure could improve a lot with the therapists and psychotrists. 
 
