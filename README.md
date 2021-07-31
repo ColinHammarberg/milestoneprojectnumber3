@@ -55,5 +55,33 @@
 
 ## Existing Features
 
+### Navigation bar 
+<a href="" target="_blank"><img src="/documentation/Navigation-bar-1.png" alt="Book Bites mobile Screen"></a>
+<a href="" target="_blank"><img src="/documentation/Navigation-bar-2.png" alt="Book Bites mobile Screen"></a>
+
+### Landing Page
+
+### Register Page
+
+### Log-in Page
+
+### About Us Page
+
+### Contact Page
+
+### Schedule Meetings
+
+### View Meetings
+
+### Edit Meetings
+
+### Information
+
+### Footer
+
+
+
+
+
 
 
