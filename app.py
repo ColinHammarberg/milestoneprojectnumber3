@@ -183,7 +183,7 @@ def delete_user(user_id):
 def delete_appointment(appointment_id):
     mongo.db.appointments.remove({"_id": ObjectId(appointment_id)})
     flash("Your booking has been cancelled")
-    return redirect(url_for("register"))
+    return redirect(url_for("add_appointment"))
 
     # The user/client should be able to change his booking (24 hours before
     #  the set time/date)
