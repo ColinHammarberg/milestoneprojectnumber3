@@ -13,26 +13,31 @@
         <form action="{{ url_for('user_appointments') }}" method="post" class="col s12">
             
         <div class="card-panel white black-text lighten-4">
+          {% if appointments|length > 0 %}
           <ul class="collapsible">
         {% for appointment in appointments %}
         <li>
             <div class="collapsible-header black-text white darken-4 text-shadow">
                 <div class="col s3">
                     <i class="fas fa-caret-down"></i>
+                    {% if session.user|lower == appointment.made_by|lower %}
                 </div>
                 <div class="col s9">
                     <strong>{{ appointment.requested_date }}</strong> : {{ appointment.meeting_type }}
                 </div>
             </div>
+                    {% endif %}
             <div class="collapsible-body">
                 <strong><b>{{ appointment.meeting_type }}</b></strong>
                 <p>Meeting topic: <strong><b>{{ appointment.meeting_description }}</b></strong></p>
                 <p>Is this a digital meeting? <strong><b>{{ appointment.digital_meeting }}</b></strong></p>
+                <p>Who scheduled this appointment: <strong><b>{{ appointment.made_by }}</b></strong></p>
                 <a href="{{ url_for('edit_appointment', appointment_id=appointment._id) }}" class="btn black white-text">Edit</a>
                 <a href="{{ url_for('delete_appointment', appointment_id=appointment._id) }}" class="btn black white-text">Delete</a>
             </div>
         </li>
         {% endfor %}
+        {% endif %}
     </ul>
    
 </div>
