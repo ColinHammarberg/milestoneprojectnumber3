@@ -15,8 +15,8 @@
           {% if appointments|length > 0 %}
           <ul class="collapsible">
         {% for appointment in appointments %}
+        {% if session.user|lower == appointment.made_by|lower %}
         <li>
-          {% if session.user|lower == appointment.made_by|lower %}
             <div class="collapsible-header black-text white darken-4 text-shadow">
                 <div class="col s3">
                     <i class="fas fa-caret-down"></i>
@@ -29,10 +29,12 @@
             <div class="collapsible-body">
                 <strong><b>{{ appointment.meeting_type }}</b></strong>
                 <p>Meeting topic: <strong><b>{{ appointment.meeting_description }}</b></strong></p>
+                <p>Meeting reflection: <strong><b>{{ appointment.meeting_reflection }}</b></strong></p>
                 <p>Is this a digital meeting? <strong><b>{{ appointment.digital_meeting }}</b></strong></p>
                 <p>Who scheduled this appointment: <strong><b>{{ appointment.made_by }}</b></strong></p>
-                <a href="{{ url_for('edit_appointment', appointment_id=appointment._id) }}" class="btn black white-text">Edit</a>
-                <a href="{{ url_for('delete_appointment', appointment_id=appointment._id) }}" class="btn black white-text">Delete</a>
+                <a href="{{ url_for('edit_appointment', appointment_id=appointment._id) }}" class="btn green white-text">Edit</a>
+                <a href="{{ url_for('delete_appointment', appointment_id=appointment._id) }}" class="btn red white-text">Delete</a>
+                <a href="{{ url_for('contact') }}" class="btn blue white-text">Contact Centre</a>
             </div>
         </li>
         {% endfor %}

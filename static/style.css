@@ -139,18 +139,18 @@ button {
   width: 100%;
   display: inline-block;
   margin-top: 450px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 /*------------------ Footer section for the home page begins here ------------- */
 
 .footer {
-  background-color: #000;
+  background-color: #0c0c0c;
   position: absolute;
   width: 100%;
   display: inline-block;
   margin-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 .home {
