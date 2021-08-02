@@ -21,12 +21,12 @@
               <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('love_therapy') }}">Home</a></li>
-                <li><a href="">About Us</a></li>
                 <li><a href="{{ url_for('contact') }}">Contact</a></li>
                 {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">My Account</a></li>
                 <li><a href="{{ url_for('add_appointment') }}">Schedule Meeting</a></li>
                 <li><a href="{{ url_for('user_appointments') }}">View Meetings</a></li>
+                <li><a href="{{ url_for('add_documentation') }}">Diary</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
                 <li><a href="{{ url_for('register') }}">Register</a></li>
@@ -40,12 +40,12 @@
         <!------- Mobile version & Ipad version navbar begins here (Inspired from Materializecss.com) ------->
           <ul class="sidenav center-align" id="mobile-demo">
             <li><a href="{{ url_for('love_therapy') }}">Home</a></li>
-                <li><a href="">About Us</a></li>
                 <li><a href="{{ url_for('contact') }}">Contact</a></li>
                 {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">My Account</a></li>
                 <li><a href="{{ url_for('add_appointment') }}">Schedule Meetings</a></li>
                 <li><a href="{{ url_for('user_appointments') }}">View Meetings</a></li>
+                <li><a href="{{ url_for('add_documentation') }}">Diary</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
                 <li><a href="{{ url_for('register') }}">Register</a></li>

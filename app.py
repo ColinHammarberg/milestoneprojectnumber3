@@ -205,6 +205,27 @@ def edit_appointment(appointment_id):
     appointment = mongo.db.appointments.find_one({"_id": ObjectId(appointment_id)})
     return render_template("edit_appointment.html", appointment=appointment)
 
+    # Documentation page (Client Diary)
+
+@app.route("/add_documentation", methods=["GET", "POST"])
+def add_documentation():
+    if request.method == "POST":
+        therapist_read = "yes" if request.form.get("therapist_read") else "no"
+        diary = {
+            "diary_type": request.form.get("diary_type"),
+            "diary_description": request.form.get("diary_description"),
+            "diary_reflection": request.form.get("diary_reflection"),
+            "therapist_note": request.form.get("therapist_note"),
+            "diary_date": request.form.get("diary_date"),
+            "therapist_read": therapist_read,
+            "made_by": session["user"]
+        }
+        mongo.db.diary.insert_one(diary)
+        flash("Your diary has been updated")
+        return redirect(url_for("love_therapy"))
+
+    return render_template("add_documentation.html")
+
 
         
 if __name__ == "__main__":
