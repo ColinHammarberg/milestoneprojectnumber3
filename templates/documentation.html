@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col s12 m4">
+<div class="row">
+<h3 class="white-text center-align booking-header">My Diary</h3>
+<p class="white-text center-align booking-paragragh">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, enim magni architecto eius aperiam voluptatem! Voluptatum quae assumenda eligendi esse expedita debitis, omnis ut rem vitae animi totam laudantium qui.
+</p>
+</div>
+</div>
+
+    <div class="container">
+    <div class="row card-panel black">
+        <form action="{{ url_for('user_diary') }}" method="post" class="col s12">
+        <div class="card-panel white black-text lighten-4">
+          {% if documentations|length > 0 %}
+          <ul class="collapsible">
+        {% for documentations in diary %}
+        {% if session.user|lower == documentations.made_by|lower %}
+        <li>
+            <div class="collapsible-header black-text white darken-4 text-shadow">
+                <div class="col s3">
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="col s9">
+                    <strong>{{ documentations.diary_date}}</strong> : {{ documentations.diary_type }}
+                </div>
+            </div>
+            {% endif %}
+            <div class="collapsible-body">
+                <strong><b>{{ documentation.diary_type }}</b></strong>
+                <p>Diary topic: <strong><b>{{ documentation.diary_description }}</b></strong></p>
+                <p>Meeting reflection: <strong><b>{{ appointment.meeting_reflection }}</b></strong></p>
+                <p>Is this a digital meeting? <strong><b>{{ appointment.digital_meeting }}</b></strong></p>
+                <p>Who scheduled this appointment: <strong><b>{{ appointment.made_by }}</b></strong></p>
+                <a href="{{ url_for('edit_appointment', appointment_id=appointment._id) }}" class="btn green white-text">Edit</a>
+                <a href="{{ url_for('delete_appointment', appointment_id=appointment._id) }}" class="btn red white-text">Delete</a>
+                <a href="{{ url_for('contact') }}" class="btn blue white-text">Contact Centre</a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
+        {% endif %}
+   
+</div>
+</div>
+</div>
+</form>
+
+<footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Love Therapy</h5>
+          <p class="grey-text text-lighten-4">Love Therapy is the official application for "Improvement Therapy & Psychiatrist Centre". <br>
+            If you would like to read more about us, then please <a href="#">press here.</a>
+        </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h6 class="white-text">We do not have any social media channels<b>.</b> <br>
+            Because we do not like the channels that are offered today<b>.</b></h6>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2021 Copyright Text
+      </div>
+    </div>
+  </footer>
+  {% endblock %}
+

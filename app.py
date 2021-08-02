@@ -212,11 +212,11 @@ def add_documentation():
     if request.method == "POST":
         therapist_read = "yes" if request.form.get("therapist_read") else "no"
         diary = {
+            "diary_date": request.form.get("diary_date"),
             "diary_type": request.form.get("diary_type"),
             "diary_description": request.form.get("diary_description"),
             "diary_reflection": request.form.get("diary_reflection"),
             "therapist_note": request.form.get("therapist_note"),
-            "diary_date": request.form.get("diary_date"),
             "therapist_read": therapist_read,
             "made_by": session["user"]
         }
@@ -225,6 +225,12 @@ def add_documentation():
         return redirect(url_for("love_therapy"))
 
     return render_template("add_documentation.html")
+
+@app.route("/documentations/", methods=["GET"])
+def user_diary():
+    if request.method == "GET":
+        documentations = list(mongo.db.diary.find())
+        return render_template("documentation.html", documentations=documentations)
 
 
         

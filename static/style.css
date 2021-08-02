@@ -174,7 +174,7 @@ button {
   height: 500px;
   border-radius: 20px;
   margin: auto;
-  margin-top: 200px;
+  margin-top: 135px;
 }
 
 .card-image {
@@ -186,7 +186,7 @@ button {
 }
 
 .card-menu {
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 li {
