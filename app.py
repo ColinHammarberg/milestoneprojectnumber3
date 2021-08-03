@@ -226,11 +226,11 @@ def add_documentation():
 
     return render_template("add_documentation.html")
 
-@app.route("/documentations/", methods=["GET"])
+@app.route("/documentation/", methods=["GET"])
 def user_diary():
     if request.method == "GET":
-        documentations = list(mongo.db.diary.find())
-        return render_template("documentation.html", documentations=documentations)
+        documentation = list(mongo.db.diary.find())
+        return render_template("documentation.html", documentation=documentation)
 
 
         
