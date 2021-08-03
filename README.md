@@ -1,4 +1,4 @@
-laskll # LOVE THERAPY
+nslaskll # LOVE THERAPY
  
 ### The Love Therapy application was created for the clients of the Love Therapy center, which is being run by DR. Edward. The application helps the clients to get a better structure on their bookings, meetings, keeping contact with Dr. Edward and being able to search up different content stored in the database.
 
@@ -69,15 +69,27 @@ laskll # LOVE THERAPY
 
 ### Register Page
 
+- The register page contains a registration form with a function which registeres and ads the users deatils into mongodb.
+- The landing page also contains a footer section in the bottom of the page. 
+
 ### Log-in Page
+
+- The log-in page contains a log-in form which contains a function that finds out if the username, password and email address exists in the databse. If the user exists and matches with the one in the database, the user will get logged in to his/hers account.
 
 ### About Us Page
 
 ### Contact Page
 
+- The contact page contains a contact form which contains a function that sends the details which the user added into the databse as well. 
+
 ### Schedule Meetings
 
+- The Schedule Meetings page contains a form which allows the user/client to send in a requested meetings. The request gets register in the database and the client support executive can then later contact the user from there. 
+
 ### View Meetings
+
+- The View Meetings page contains a drop down selection menu, which contains all of the meetings that the user has requested. The View Meetings drop down selection menu has a function, which collects all of the meetings in the database that have been created by the logged in user.
+
 
 ### Edit Meetings
 
