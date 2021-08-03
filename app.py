@@ -226,6 +226,7 @@ def add_documentation():
 
     return render_template("add_documentation.html")
 
+    # Lets the user/client view his/her added documentation inputs (Client Diary)
 
 @app.route("/documentations/", methods=["GET"])
 def user_diary():
