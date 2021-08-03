@@ -22,9 +22,9 @@
         <!-- Diary/Journal type text input begins here-->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-bell prefix"></i>
+                <i class="fas fa-moon prefix"></i>
                     <select id="diary_type" name="diary_type" required>
-                      <option value="" disabled selected>Feelings</option>
+                      <option value="" disabled selected>Mood</option>
                       <option value="I feel terrible">I feel terrible</option>
                       <option value="I feel bad">I feel bad</option>
                       <option value="I feel alright">I feel alright</option>
@@ -36,8 +36,8 @@
 
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-phone-square-alt prefix"></i>
-                <textarea id="diary_description" name="diary_description" minlength="5"
+                <i class="fas fa-pen-alt prefix"></i>
+                <textarea id="diary_description" name="diary_description" maxlength="50" minlength="5"
                      class="materialize-textarea validate"></textarea>
                 <label for="diary_description">What is today's diary about?</label>
             </div>
@@ -45,7 +45,7 @@
 
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-inbox prefix"></i>
+                <i class="fas fa-pen-alt prefix"></i>
                 <textarea id="diary_reflection" name="diary_reflection" minlength="5"
                     maxlength="2000" class="materialize-textarea validate" required></textarea>
                 <label for="diary_reflection">Write your documentation here:</label>
@@ -54,7 +54,7 @@
 
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-inbox prefix"></i>
+                <i class="fas fa-book prefix"></i>                
                 <textarea id="therapist_note" name="therapist_note" minlength="5"
                     maxlength="500" class="materialize-textarea validate" required></textarea>
                 <label for="therapist_note">Would you like to leave a note for your therapist?</label>
