@@ -70,32 +70,43 @@ nslaskll # LOVE THERAPY
 ### Register Page
 
 - The register page contains a registration form with a function which registeres and ads the users deatils into mongodb.
-- The landing page also contains a footer section in the bottom of the page. 
+- The register page also contains a footer section in the bottom of the page. 
 
 ### Log-in Page
 
 - The log-in page contains a log-in form which contains a function that finds out if the username, password and email address exists in the databse. If the user exists and matches with the one in the database, the user will get logged in to his/hers account.
+- The Log-In page also contains a footer section in the bottom of the page. 
 
 ### About Us Page
 
 ### Contact Page
 
 - The contact page contains a contact form which contains a function that sends the details which the user added into the databse as well. 
+- The Contact page also contains a footer section in the bottom of the page. 
 
 ### Schedule Meetings
 
-- The Schedule Meetings page contains a form which allows the user/client to send in a requested meetings. The request gets register in the database and the client support executive can then later contact the user from there. 
+- The Schedule Meetings page contains a form which allows the user/client to send in a requested meetings. The request gets register in the database and the client support executive can then later contact the user from there.
+- The Scedhule Meetings page also contains a footer section in the bottom of the page. 
 
 ### View Meetings
 
-- The View Meetings page contains a drop down selection menu, which contains all of the meetings that the user has requested. The View Meetings drop down selection menu has a function, which collects all of the meetings in the database that have been created by the logged in user.
+- The View Meetings page contains drop down menu contains a function, which finds all of the meetings requested by the logged in user. The user/client then receives a structured calendar for his/her requested bookings. 
+- The View Meetings page also contains a footer section in the bottom of the page. 
+
 
 
 ### Edit Meetings
 
+- The View Meetings page contains a form, which contains the meeting's inputs that the user has requested. The Edit Meetings drop down selection menu has a function, which lets the user edit the meeting that they have created. When updating the details in the form, the details with the same ID will be updated in the database as well.
+- The Edit Meetings page also contains a footer section in the bottom of the page. 
+
+
 ### Information
 
 ### Footer
+
+- The footer contains information about the company and the company behind the application. It also states very clearly, that the company does mnot have any social media.
 
 
 

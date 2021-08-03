@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<h3 class="white-text center-align">Documentation</h3>
-<div class="row">
-<div class="col s12 request-header center-align white-text">
-    <p class="center-align"> Love Therapy offers a digital solution to a diary, which both you and your Therapist/Psychiatrist can view. This also gives you and your Therapist/Psychiatrist a good start in your conversations when you're having your meetings. <br>
-        If your Therapist/Psychiatrist advice you to use the diary, please make sure you use it frequently. We advice all of our clients to take usage of the diary, because it benefits <br> to go back and read about yourself in different life situations.
+<div class="col s12 m4">
+    <div class="row">
+    <h3 class="white-text center-align booking-header">Document In Your Diary</h3>
+    <p class="white-text center-align booking-paragragh">Here you are able to add documentation in your own diary. Both you and your therapist are able to see what you have posted.<br> This will give you and your therapist a good start when you're having your sessions.
     </p>
-</div>
-</div>
+    </div>
+    </div>
 <div class="row card-panel black lighten-5">
     <!-- form tags begins here-->
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_documentation') }}">
