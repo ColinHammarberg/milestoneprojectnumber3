@@ -12,8 +12,11 @@
     <div class="row card-panel black">
         <form action="{{ url_for('user_diary') }}" method="post" class="col s12">
         <div class="card-panel white black-text lighten-4">
+          
+          {% if documentations|length > 0 %}
           <ul class="collapsible">
-        {% for documentation in diary %}
+        {% for documentations in diary %}
+        {% if session.user|lower == documentations.made_by|lower %}
         
         <li>
             <div class="collapsible-header black-text white darken-4 text-shadow">
@@ -21,24 +24,28 @@
                     <i class="fas fa-caret-down"></i>
                 </div>
                 <div class="col s9">
-                    <strong>{{ documentation.diary_date}}</strong> : {{ documentation.diary_type }}
+                    <strong>{{ documentations.diary_date}}</strong> : {{ documentations.diary_type }}
                 </div>
             </div>
+            {% endif %}
             <div class="collapsible-body">
                 <strong><b>{{ documentation.diary_type }}</b></strong>
                 <p>Diary topic: <strong><b>{{ documentation.diary_description }}</b></strong></p>
                 <p>Diary reflection: <strong><b>{{ documentation.diary_reflection }}</b></strong></p>
-                <p>Are your therapist going to read this: <strong><b>{{ documentation.therapist_read }}</b></strong></p>
-                <p>Who uploaded this post: <strong><b>{{ documentation.made_by }}</b></strong></p>
+                <p>Is this a digital meeting? <strong><b>{{ documentation.therapist_note }}</b></strong></p>
+                <p>Who posted this: <strong><b>{{ documentation.made_by }}</b></strong></p>
                 <a href="{{ url_for('edit_appointment', appointment_id=appointment._id) }}" class="btn green white-text">Edit</a>
                 <a href="{{ url_for('delete_appointment', appointment_id=appointment._id) }}" class="btn red white-text">Delete</a>
                 <a href="{{ url_for('contact') }}" class="btn blue white-text">Contact Centre</a>
             </div>
         </li>
         {% endfor %}
-    </ul>
+      </ul>
+      {% else %}
+          <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
+          {% endif %}
     
-   
+
 </div>
 </div>
 </div>
@@ -56,6 +63,10 @@
         <div class="col l4 offset-l2 s12">
           <h6 class="white-text">We do not have any social media channels<b>.</b> <br>
             Because we do not like the channels that are offered today<b>.</b></h6>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h6 class="white-text">Call us at<b>:  </b>
+            0011111111</h6>
         </div>
       </div>
     </div>
