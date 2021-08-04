@@ -1,8 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="col s12 m4">
+    <div class="row">
+    <h3 class="white-text center-align booking-header">Edit Bookings</h3>
+    <p class="white-text center-align booking-paragragh">Here you are able to edit your current bookings. If you would change your booking less than 24 before, Love Therapy will charge you 50% of the booking you changed.
+    </p>
+    </div>
+    </div>
+
 <div class="container">
-    <div class="row card-panel grey lighten-5">
+    <div class="row card-panel black lighten-5">
         <!-- form tags begins here-->
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_appointment', appointment_id=appointment._id) }}">
             <div class="card-panel teal lighten-4">
@@ -26,7 +34,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-headset prefix text-black"></i>
                         <textarea id="meeting_description" name="meeting_description" minlength="5"
-                            maxlength="200" value="{{ appointments.meeting_description }}" class="materialize-textarea validate" required></textarea>
+                            maxlength="200" class="materialize-textarea validate" required>{{- appointment.meeting_description -}}</textarea>
                         <label for="meeting_description">What would you like to discuss on your meeting?</label>
                     </div>
                 </div>
@@ -37,21 +45,33 @@
                     <div class="input-field col s12">
                         <i class="fas fa-question-circle prefix text-black"></i>
                         <textarea id="meeting_reflection" name="meeting_reflection" minlength="5"
-                            maxlength="200" class="materialize-textarea validate" required>{{- appointments.meeting_reflection -}}</textarea>
+                            maxlength="200" class="materialize-textarea validate" required>{{- appointment.meeting_reflection -}}</textarea>
                         <label for="meeting_reflection">Why would you like to discuss this?</label>
                     </div>
                 </div>
     
-                <!-- due date picker -->
+                <!-- Calendar  -->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
                         <input id="requested_date" name="requested_date" type="text"
-                            value="{{ appointments.requested_date }}" class="datepicker validate" required>
+                            value="{{ appointment.requested_date }}" class="datepicker validate" required>
                         <label for="requested_date">Requested date</label>
                     </div>
                 </div>
-                <!-- is urgent toggle -->
+                <!-- Digital meeting -->
+
+                <div class="row">
+                    <div class="input-field col s12">
+                    <div class="switch">
+                        <label for="digital_meeting">
+                        <input type="checkbox" id="digital_meeting" name="digital_meeting" value="{{ appointment.digital_meeting }}">
+                        <span class="lever"></span>
+                        Would you like to have the meeting digitally?
+                    </label>
+                    </div>
+                </div>
+            </div>
                 
                 <!-- submit button -->
                 <div class="row">
@@ -61,7 +81,7 @@
                             Cancel <i class="fas fa-times-circle right"></i>
                         </a>
                         <button type="submit" class="btn-large light-blue darken-1 text-shadow">
-                            Edit<i class="fas fa-edit right"></i>
+                            Update<i class="fas fa-edit right"></i>
                         </button>
                     </div>
                 </div>

@@ -191,6 +191,7 @@ def delete_appointment(appointment_id):
 @app.route("/edit_appointment/<appointment_id>", methods=["GET", "POST"])
 def edit_appointment(appointment_id):
     if request.method == "POST":
+        digital_meeting = "yes" if request.form.get("digital_meeting") else "no"
         submit = {
             "meeting_type": request.form.get("meeting_type"),
             "meeting_description": request.form.get("meeting_description"),
