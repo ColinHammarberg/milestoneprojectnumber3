@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="col s12 m4">
-    <div class="row">
-    <h3 class="white-text center-align booking-header">Document In Your Diary</h3>
-    <p class="white-text center-align booking-paragragh">Here you are able to add documentation in your own diary. Both you and your therapist are able to see what you have posted.<br> This will give you and your therapist a good start when you're having your sessions.
+<h3 class="white-text center-align">My Journal</h3>
+<div class="row">
+<div class="col s12 request-header center-align white-text">
+    <p class="center-align"> On this page you are able to document how you are feeling in your journal.<br>
+        Your therapist may give you assignments which includes this journal tool. 
     </p>
-    </div>
-    </div>
+</div>
+</div>
 <div class="row card-panel black lighten-5">
     <!-- form tags begins here-->
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_documentation') }}">

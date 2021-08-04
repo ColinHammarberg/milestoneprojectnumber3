@@ -30,6 +30,26 @@ body {
 
 /*------------------ navbar ends here ------------- */
 
+/*------------------ headers begins here ------------- */
+
+.request-header {
+  font-size: 18px;
+}
+
+@media(max-width: 768px) {
+  .request-header {
+    font-size: 14px;
+  }
+
+  .journal-header {
+    font-size: 24px;
+  }
+
+}
+
+/*------------------ headers ends here ------------- */
+
+
 /*------------------ landing image begins here ------------- */
 
 .img-1 {
@@ -111,22 +131,12 @@ button {
 
 /*------------------ Request a meeting page begins here ------------- */
 
-.request-header {
-  font-size: 18px;
-}
-
 .btn-large {
   margin-bottom: 20px;
 }
 
 .card-panel {
   margin-top: 30px;
-}
-
-@media(max-width: 768px){
-  .request-header {
-    font-size: 14px;
-  }
 }
 
 /*------------------ Request a meeting page ends here ------------- */
