@@ -233,7 +233,7 @@ def add_documentation():
 def user_documentation():
     if request.method == "GET":
         diary = list(mongo.db.diary.find())
-        return render_template("appointments.html", diary=diary)
+        return render_template("documentation.html", diary=diary)
 
         
 if __name__ == "__main__":

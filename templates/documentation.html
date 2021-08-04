@@ -16,9 +16,10 @@
         <form action="{{ url_for('user_documentation') }}" method="post" class="col s12">
         <div class="card-panel white black-text lighten-4">
           
-
+      {% if diary|length > 0 %}
           <ul class="collapsible">
       {% for diary in diary %}
+      {% if session.user|lower == diary.made_by|lower %}
 
         <li>
             <div class="collapsible-header black-text white darken-4 text-shadow">
@@ -29,19 +30,20 @@
                     <strong>{{ diary.diary_date}}</strong> : {{ diary.diary_type }}
                 </div>
             </div>
+            {% endif %}
             <div class="collapsible-body">
-                <strong><b>{{ diary.diary_type }}</b></strong>
-                <p>Diary topic: <strong><b>{{ diary.diary_description }}</b></strong></p>
-                <p>Diary reflection: <strong><b>{{ diary.diary_reflection }}</b></strong></p>
-                <p>Is this a digital meeting? <strong><b>{{ diary.therapist_note }}</b></strong></p>
+                <p> How are you feeling: <strong><b>{{ diary.diary_type }}</b></strong></p>
+                <p>Journal topic: <strong><b>{{ diary.diary_description }}</b></strong></p>
+                <p>Journal reflection: <strong><b>{{ diary.diary_reflection }}</b></strong></p>
+                <p>Note for therapist: <strong><b>{{ diary.therapist_note }}</b></strong></p>
                 <p>Who posted this: <strong><b>{{ diary.made_by }}</b></strong></p>
-                <a href="{{ url_for('edit_appointment', appointment_id=appointment._id) }}" class="btn green white-text">Edit</a>
-                <a href="{{ url_for('delete_appointment', appointment_id=appointment._id) }}" class="btn red white-text">Delete</a>
-                <a href="{{ url_for('contact') }}" class="btn blue white-text">Contact Centre</a>
             </div>
         </li>
         {% endfor %}
-      </ul>
+    </ul>
+    {% else %}
+        <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
+        {% endif %}
      
     
 
