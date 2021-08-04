@@ -229,13 +229,11 @@ def add_documentation():
 
     # Lets the user/client view his/her added documentation inputs (Client Diary)
 
-@app.route("/documentations/", methods=["GET"])
-def user_diary():
+@app.route("/diary/", methods=["GET"])
+def user_documentation():
     if request.method == "GET":
-        documentations = list(mongo.db.diary.find())
-        return render_template("documentation.html", documentations=documentations)
-
-
+        diary = list(mongo.db.diary.find())
+        return render_template("appointments.html", diary=diary)
 
         
 if __name__ == "__main__":

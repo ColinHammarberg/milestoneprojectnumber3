@@ -1,7 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-
+<h3 class="white-text center-align">My Profile</h3>
+<div class="row">
+<div class="col s12 request-header center-align white-text">
+    <p class="center-align"> On this page you are able to see your account profile.<br>
+        You are also able to access a few selections that are not displayed in the main menu. 
+    </p>
+</div>
+</div>
 <div class="card center-align">
     <div class="card-image waves-effect waves-block waves-light">
       <img class="activator center-align" src="https://cdn.dribbble.com/users/388048/screenshots/2303293/therapist.gif">
@@ -13,7 +20,7 @@
       <span class="card-title grey-text text-darken-4">{{ username }}<i class="fas fa-bars right"></i></span>
         <ul class="card-menu">
           <li class="menu-points"><a href="{{ url_for('add_appointment') }}">Booking</a></li>
-          <li class="menu-points"><a href="{{ url_for('user_diary') }}">View Diary</a></li>
+          <li class="menu-points"><a href="{{ url_for('user_documentation') }}">View Diary</a></li>
           <li class="menu-points"><a href="#">Content</a></li>
           <li class="menu-points"><a href="{{ url_for('delete_user', user_id=user._id) }}">Delete My Account</a></li>
       </ul>

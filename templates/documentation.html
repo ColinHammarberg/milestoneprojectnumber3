@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<h3 class="white-text center-align">My Bookings</h3>
+
+<h3 class="white-text center-align">My Journal</h3>
 <div class="row">
 <div class="col s12 request-header center-align white-text">
     <p class="center-align"> On this page you are able to view the posts that you have made in your journal.<br>
@@ -12,30 +13,28 @@
 
     <div class="container">
     <div class="row card-panel black">
-        <form action="{{ url_for('user_diary') }}" method="post" class="col s12">
+        <form action="{{ url_for('user_documentation') }}" method="post" class="col s12">
         <div class="card-panel white black-text lighten-4">
           
-          {% if documentations|length > 0 %}
+
           <ul class="collapsible">
-        {% for documentations in diary %}
-        {% if session.user|lower == documentations.made_by|lower %}
-        
+      {% for diary in diary %}
+
         <li>
             <div class="collapsible-header black-text white darken-4 text-shadow">
                 <div class="col s3">
                     <i class="fas fa-caret-down"></i>
                 </div>
                 <div class="col s9">
-                    <strong>{{ documentations.diary_date}}</strong> : {{ documentations.diary_type }}
+                    <strong>{{ diary.diary_date}}</strong> : {{ diary.diary_type }}
                 </div>
             </div>
-            {% endif %}
             <div class="collapsible-body">
-                <strong><b>{{ documentation.diary_type }}</b></strong>
-                <p>Diary topic: <strong><b>{{ documentation.diary_description }}</b></strong></p>
-                <p>Diary reflection: <strong><b>{{ documentation.diary_reflection }}</b></strong></p>
-                <p>Is this a digital meeting? <strong><b>{{ documentation.therapist_note }}</b></strong></p>
-                <p>Who posted this: <strong><b>{{ documentation.made_by }}</b></strong></p>
+                <strong><b>{{ diary.diary_type }}</b></strong>
+                <p>Diary topic: <strong><b>{{ diary.diary_description }}</b></strong></p>
+                <p>Diary reflection: <strong><b>{{ diary.diary_reflection }}</b></strong></p>
+                <p>Is this a digital meeting? <strong><b>{{ diary.therapist_note }}</b></strong></p>
+                <p>Who posted this: <strong><b>{{ diary.made_by }}</b></strong></p>
                 <a href="{{ url_for('edit_appointment', appointment_id=appointment._id) }}" class="btn green white-text">Edit</a>
                 <a href="{{ url_for('delete_appointment', appointment_id=appointment._id) }}" class="btn red white-text">Delete</a>
                 <a href="{{ url_for('contact') }}" class="btn blue white-text">Contact Centre</a>
@@ -43,15 +42,16 @@
         </li>
         {% endfor %}
       </ul>
-      {% else %}
-          <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
-          {% endif %}
+     
     
 
 </div>
 </div>
 </div>
 </form>
+      
+        
+        
 
 <footer class="page-footer">
     <div class="container">

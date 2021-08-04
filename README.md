@@ -102,7 +102,15 @@ nslaskll # LOVE THERAPY
 - The Edit Meetings page also contains a footer section in the bottom of the page. 
 
 
-### Information
+### Journal
+
+- The Journal page contains a documentation form which allows the user/client to write and documentate about her/his day. It contains a function which registeres everything which has been posted in the database. This is something Therapists & Psychiatrist are using a lot when they are working with clients, and to digitize the procedure makes it a lot easier or both the user/client and the Therapist/Psychiatrist. 
+- The Journal page also contains a footer section in the bottom of the page. 
+
+### View Journal
+
+- The View Journal page contains a drop down menu selector which lets the user/client to view the journal posts him/her have done. It also lets the Therpist/Psychiatrist to read what him/her have been writing. It gives a big benefit in the sessions between the client & the Therapist/Psychiatrist, because they both will be aware of where they should begin the conversation. 
+- The View Journal page also contains a footer section in the bottom of the page. 
 
 ### Footer
 
