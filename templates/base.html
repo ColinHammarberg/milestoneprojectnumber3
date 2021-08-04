@@ -26,7 +26,7 @@
                 <li><a href="{{ url_for('profile', username=session['user']) }}">My Account</a></li>
                 <li><a href="{{ url_for('add_appointment') }}">Schedule Meeting</a></li>
                 <li><a href="{{ url_for('user_appointments') }}">View Meetings</a></li>
-                <li><a href="{{ url_for('add_documentation') }}">Diary</a></li>
+                <li><a href="{{ url_for('add_documentation') }}">Journal</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
                 <li><a href="{{ url_for('register') }}">Register</a></li>
@@ -45,7 +45,7 @@
                 <li><a href="{{ url_for('profile', username=session['user']) }}">My Account</a></li>
                 <li><a href="{{ url_for('add_appointment') }}">Schedule Meetings</a></li>
                 <li><a href="{{ url_for('user_appointments') }}">View Meetings</a></li>
-                <li><a href="{{ url_for('add_documentation') }}">Diary</a></li>
+                <li><a href="{{ url_for('add_documentation') }}">Journal</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
                 <li><a href="{{ url_for('register') }}">Register</a></li>

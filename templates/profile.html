@@ -19,10 +19,9 @@
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">{{ username }}<i class="fas fa-bars right"></i></span>
         <ul class="card-menu">
-          <li class="menu-points"><a href="{{ url_for('add_appointment') }}">Booking</a></li>
-          <li class="menu-points"><a href="{{ url_for('user_documentation') }}">View Diary</a></li>
-          <li class="menu-points"><a href="#">Content</a></li>
-          <li class="menu-points"><a href="{{ url_for('delete_user', user_id=user._id) }}">Delete My Account</a></li>
+          <li class="menu-points"><a href="{{ url_for('add_appointment') }}" class="btn-large red white-text">Booking</a></li>
+          <li class="menu-points"><a href="{{ url_for('user_documentation') }}" class="btn-large green white-text">View Journal</a></li>
+          <li class="menu-points"><a href="{{ url_for('delete_user', user_id=user._id) }}" class="btn-large blue white-text">Delete My Account</a></li>
       </ul>
     </div>
   </div>

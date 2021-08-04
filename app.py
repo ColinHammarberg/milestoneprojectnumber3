@@ -211,7 +211,7 @@ def edit_appointment(appointment_id):
 @app.route("/add_documentation", methods=["GET", "POST"])
 def add_documentation():
     if request.method == "POST":
-        therapist_read = "yes" if request.form.get("therapist_read") else "no"
+        therapist_read = "Yes" if request.form.get("therapist_read") else "No"
         diary = {
             "diary_date": request.form.get("diary_date"),
             "diary_type": request.form.get("diary_type"),
