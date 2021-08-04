@@ -3,8 +3,8 @@
 
 <div class="col s12 m4">
     <div class="row">
-    <h3 class="white-text center-align booking-header">Edit Bookings</h3>
-    <p class="white-text center-align booking-paragragh">Here you are able to edit your current bookings. If you would change your booking less than 24 before, Love Therapy will charge you 50% of the booking you changed.
+    <h3 class="white-text center-align booking-header">Update Your Booking</h3>
+    <p class="white-text center-align booking-paragragh">Here you are able to update your current bookings. If you would change your booking less than 24 before, Love Therapy will charge you 50% of the booking you changed.
     </p>
     </div>
     </div>
@@ -13,7 +13,7 @@
     <div class="row card-panel black lighten-5">
         <!-- form tags begins here-->
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_appointment', appointment_id=appointment._id) }}">
-            <div class="card-panel teal lighten-4">
+            <div class="card-panel white lighten-4">
             <!-- Meeting type text input begins here-->
             <div class="row">
                 <div class="input-field col s12">
@@ -53,7 +53,7 @@
                 <!-- Calendar  -->
                 <div class="row">
                     <div class="input-field col s12">
-                        <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                        <i class="fas fa-calendar-alt prefix text-darken-4"></i>
                         <input id="requested_date" name="requested_date" type="text"
                             value="{{ appointment.requested_date }}" class="datepicker validate" required>
                         <label for="requested_date">Requested date</label>
@@ -75,17 +75,41 @@
                 
                 <!-- submit button -->
                 <div class="row">
-                    <div class="col s12 center-align">
-                        <!-- cancel button -->
-                        <a href="#" class="btn-large red text-shadow">
-                            Cancel <i class="fas fa-times-circle right"></i>
-                        </a>
-                        <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                    <div class="col s12 center-align">                    
+                        <button type="submit" class="btn-large green darken-1 text-shadow">
                             Update<i class="fas fa-edit right"></i>
                         </button>
                     </div>
                 </div>
             </form>
         </div>
+        </div>
+    </div>
+
+        <footer class="page-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col l6 s12">
+                  <h5 class="white-text">Love Therapy</h5>
+                  <p class="grey-text text-lighten-4">Love Therapy is the official application for "Improvement Therapy & Psychiatrist Centre". <br>
+                    If you would like to read more about us, then please <a href="#">press here.</a>
+                </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                  <h6 class="white-text">We do not have any social media channels<b>.</b> <br>
+                    Because we do not like the channels that are offered today<b>.</b></h6>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                  <h6 class="white-text">Call us at<b>:  </b>
+                    0011111111</h6>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="container">
+              © 2021 Copyright Text
+              </div>
+            </div>
+          </footer>
 
 {% endblock %}
