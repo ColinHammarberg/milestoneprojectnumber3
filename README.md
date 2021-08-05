@@ -27,10 +27,10 @@ nslaskll # LOVE THERAPY
 * The project uses CSS to design all pages. I have put a lot of energy on the design and still am. I prefer to use external CSS, instead of internal CSS to achive a "better" code.
 
 ### JavaScript
-* The project uses Javascript. I have had minor difficulties with Javascript, but I think that so far it have turned our pretty well.
+* The project uses Javascript.
 
 ### jQuery 
-* The project uses jQuery. I have added quite a lot of jQuery (but mostly the same code on all pages to receive an even functionality). 
+* The project uses jQuery.
 
 ### PYTHON
 * The project uses Python to build the actual application and its functionalities.

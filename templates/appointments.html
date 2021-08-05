@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<h3 class="white-text center-align journal-header">My Meetings</h3>
+<h3 class="white-text center-align content-header">My Meetings</h3>
 <div class="row">
 <div class="col s12 request-header center-align white-text">
     <p class="center-align"> On this page you are able to see the bookings that you have made.<br>
@@ -33,9 +33,9 @@
                 <p>Meeting reflection: <strong><b>{{ appointment.meeting_reflection }}</b></strong></p>
                 <p>Is this a digital meeting? <strong><b>{{ appointment.digital_meeting }}</b></strong></p>
                 <p>Who scheduled this appointment: <strong><b>{{ appointment.made_by }}</b></strong></p>
-                <a href="{{ url_for('edit_appointment', appointment_id=appointment._id) }}" class="btn green white-text">Edit</a>
-                <a href="{{ url_for('delete_appointment', appointment_id=appointment._id) }}" class="btn red white-text">Delete</a>
-                <a href="{{ url_for('contact') }}" class="btn blue white-text contact-btn">Contact</a>
+                <a href="{{ url_for('edit_appointment', appointment_id=appointment._id) }}" class="btn green white-text"><i class="fas fa-edit right"></i></i>Edit</a>
+                <a href="{{ url_for('delete_appointment', appointment_id=appointment._id) }}" class="btn red white-text"><i class="fas fa-minus-circle right"></i>Delete</a>
+                <a href="{{ url_for('contact') }}" class="btn blue white-text contact-btn"><i class="fas fa-id-card right"></i>Contact</a>
             </div>
         </li>
         {% endfor %}
