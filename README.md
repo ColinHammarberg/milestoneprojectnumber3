@@ -1,4 +1,4 @@
-nslaskll # LOVE THERAPY
+ inslaskll # LOVE THERAPY
  
 ### The Love Therapy application was created for the clients of the Love Therapy center, which is being run by DR. Edward. The application helps the clients to get a better structure on their bookings, meetings, keeping contact with Dr. Edward and being able to search up different content stored in the database.
 
@@ -122,6 +122,54 @@ nslaskll # LOVE THERAPY
 * I would also like to implement a direct booking system which shows when there are available slots and that triggers an automatic text message and email which should be sent to the client when completing a booking. 
 
 # MEDIA & CONTENT
+
+<br>
+<br>
+
+# TESTING
+
+### I have been conducting tests on the deveoped application. The tests that I have been conducting are the following.
+
+#### Landing Page (Macbook Air M1 + External Screen)
+* The landing page has two different shades. One where the user has not been logged in and I have made sure that only the pages visible then are (Home, Contact, Register & Log-in). This is made because the user7client has not yet registered and is not allowed access to any other pages at that time. 
+* In the second shade of the landing page, the user has logged in and the home/landing page is still visible. But in the second shade, the user/client are able to go to the following pages (Home, Contact, My Account, Schedule Meetings, View Meetings, Journal and the Logout function.)
+* There is also a button which works just fine on the landing/home page, which brings the user/client to an external website (https://www.spce.com). 
+
+#### Contact Page (Macbook Air M1 + External Screen)
+* The contact page has been tested and works fine too. I decided not to use EmailJS as previous Milestone Projects. Instead, I used mongodb. The user/client enters his/her contact information and message, and that is later on registered into the database folder "emails". 
+* I have been testing this carefully as the other functions, where I have filled up the form and then pressed the button. Then I have checked so that the information is published in my databse, in the correct folder & structure.
+* Even here, I have ben testing the navigation bar to see that everything works fine. 
+
+#### My Account Page (Macbook Air M1 + External Screen)
+* The My Account page includes more options for the user/client. There is a button for making Bookings, Viewing the right journal & for the user/client to delete his/her account. 
+* The Booking button on the My Account page works fine and is bringing the user/client to the correct meeting page. 
+* The View Journal button brings the user/client to the page where all of their journal posts are visible in order. This has also been tested mutiple times, and has been working fine every time.
+* The Delete My Account button has been tested multiple times to. It automatically triggers the delete_user function and I have also made sure that the user/client no longer exists in the database by looking in my database when the function is triggered. I have also tried to log-in with the same user information multiple times after deleting the user, and it doesn't work to log in again and the correct flash message is being displayed.
+* Even here, I have ben testing the navigation bar to see that everything works fine. 
+
+#### Scedule Meetings Page (Macbook Air M1 + External Screen)
+* The Schedule Meetings page is where the user/client requests a booking. This function inserts the information provided by the user into the database (in the folder named appointments).
+* This functionality and form has been tested multiple times too and has been working fine. I have tried to make different variations of bookings, just to see that it inserts the right information provided by the user/client. 
+* Even here, I have ben testing the navigation bar to see that everything works fine.
+
+#### View Meetings Page (Macbook Air M1 + External Screen)
+* The View Meetings page is where the user/client is able to view all of the requested bookings he/she has made. The function is finding and displaying all of the meetings booked by the logged in user/client.
+* I have made sure that the viewing functionality displays all the accurate data. 
+* The viewing page also has a few buttons which lets the user/client to make different options. The user/client is able to delete the booking, update the booking and contact the centre. 
+* I have made sure that all buttons are working and are bringing the user/client to the accurate pages. The delete meeting function has been tested and I have made sure that the meeting is removed from the database and also not visible on the viewing meetings page.
+* Even here, I have ben testing the navigation bar to see that everything works fine.
+
+#### Update Meetings Page (Macbook Air M1 + External Screen)
+* The Update Meetings page is only visble if the user/client presses the button on the View Meetings page, named "Update". 
+* The page gives the user/client the accurate input they have registered at first when they created the meeting. I have made sure that the accurate data is being displayed right from the beginning on the Update Meetings page. 
+* 
+
+
+
+
+
+
+
 
 ### Landing page (https://cdn.dribbble.com/users/388048/screenshots/2303293/therapist.gif)
 
