@@ -116,6 +116,11 @@ nslaskll # LOVE THERAPY
 
 - The footer contains information about the company and the company behind the application. It also states very clearly, that the company does not have any social media.
 
+### Features left to implement
+
+* In the future I would like to integrate SPCE (Digital meeting platform) onto the application and that the client automatically receives an account when creating an account on Love Therapy. It would be easier for the client to have digital meetings then.
+* I would also like to implement a direct booking system which shows when there are available slots and that triggers an automatic text message and email which should be sent to the client when completing a booking. 
+
 # MEDIA & CONTENT
 
 ### Landing page (https://cdn.dribbble.com/users/388048/screenshots/2303293/therapist.gif)
