@@ -25,6 +25,7 @@ body {
 
 .branding {
   font-size: 30px;
+  padding-left: 10px;
 }
 
 @media(max-width: 368px) {

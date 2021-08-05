@@ -1,4 +1,4 @@
- inslaskll # LOVE THERAPY
+# LOVE THERAPY
  
 ### The Love Therapy application was created for the clients of the Love Therapy center, which is being run by DR. Edward. The application helps the clients to get a better structure on their bookings, meetings, keeping contact with Dr. Edward and being able to search up different content stored in the database.
 
@@ -162,7 +162,22 @@
 #### Update Meetings Page (Macbook Air M1 + External Screen)
 * The Update Meetings page is only visble if the user/client presses the button on the View Meetings page, named "Update". 
 * The page gives the user/client the accurate input they have registered at first when they created the meeting. I have made sure that the accurate data is being displayed right from the beginning on the Update Meetings page. 
-* 
+* The page also updates the changes in my mongo database and also shows the changes when viewing the booking on the application. I have made sure that it works and is being displayed accurately. 
+* Even here, I have ben testing the navigation bar to see that everything works fine.
+
+#### Log-in Page (Macbook Air M1 + External Screen)
+* The Log-in page contains a log-in form with a function that looks for if the username and user details matches any in the database. If it matches, the user/client will get logged in. 
+* I have conducted tests on both using a username and user details that exists in the database, and it is logging in the user without any issues. 
+* I have also conducted tests with using a username and (or) user details that doesn't exist in the database. When this happens, it does not log in any user and instead shows a flash message of the accuarte content.
+* Even here, I have ben testing the navigation bar to see that everything works fine.
+
+#### Register Page (Macbook Air M1 + External Screen)
+* The Register page contains a registration form with a function to add a new user to the database. When doing this, it automatically creates a new user and logs the user directly in to his/her account.
+* I have conducted tests by creating a new user while checking if it has been added into the accurate (users) folder in my mongo database. I have also made sure of that it automatically logs the new user in, without having to log-in again.
+* Even here, I have ben testing the navigation bar to see that everything works fine.
+
+
+
 
 
 
