@@ -114,7 +114,11 @@ nslaskll # LOVE THERAPY
 
 ### Footer
 
-- The footer contains information about the company and the company behind the application. It also states very clearly, that the company does mnot have any social media.
+- The footer contains information about the company and the company behind the application. It also states very clearly, that the company does not have any social media.
+
+# MEDIA & CONTENT
+
+### Landing page (https://cdn.dribbble.com/users/388048/screenshots/2303293/therapist.gif)
 
 
 

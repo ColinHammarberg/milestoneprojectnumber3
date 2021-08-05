@@ -41,6 +41,11 @@ body {
 
 /*------------------ headers begins here ------------- */
 
+.terms-paragragh {
+  margin-top: 100px;
+}
+
+
 .request-header {
   font-size: 18px;
 }
