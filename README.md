@@ -58,23 +58,26 @@
 ## Existing Features
 
 ### Navigation bar 
-<a href="" target="_blank"><img src="/documentation/Navigation-bar-1.png" alt="Book Bites mobile Screen"></a>
-<a href="" target="_blank"><img src="/documentation/Navigation-bar-2.png" alt="Book Bites mobile Screen"></a>
+<a href="" target="_blank"><img src="/images/Navigation-bar-1.png" alt="Book Bites mobile Screen"></a>
+<a href="" target="_blank"><img src="/images/Navigation-bar-2.png" alt="Book Bites mobile Screen"></a>
 
 - The navigation bar is featured on all pages, but in different ways. If a user has not yet created an account and is currently logged into his/hers account, some of the application's features are not visible. The navigation bar is responsive and includes links to the "Love Therapy" logo, Home/Landing page, Contact page, My Account page, Schedule Meetings page, View Meetings page, Diary page and Log Out function (which directly logs out the user). It is identical in each page to allow for smooth navigation throughout the whole application.
 - This nav bar will allow the user to easily find him or herself all around the application. As does the mobile navigation slide out (which comes out from the right side when the user activates it by clicking the hamburger icon).
 
 ### Landing Page
+<a href="" target="_blank"><img src="/images/Landing_page_therapy.png" alt="Book Bites mobile Screen"></a>
 
 - The landing page contains a navigation bar, a Gif with some cool effects, and about us section in between the Gifs and a footer section which contains more information about the application and its therapy centre/application.
 - The landing page also contains a footer section in the bottom of the page. 
 
 ### Register Page
+<a href="" target="_blank"><img src="/images/UX-LOVE_THERAPY.png" alt="Book Bites mobile Screen"></a>
 
 - The register page contains a registration form with a function which registeres and ads the users deatils into mongodb.
 - The register page also contains a footer section in the bottom of the page. 
 
 ### Log-in Page
+<a href="" target="_blank"><img src="/images/UX-LOVE_THERAPY.png" alt="Book Bites mobile Screen"></a>
 
 - The log-in page contains a log-in form which contains a function that finds out if the username, password and email address exists in the databse. If the user exists and matches with the one in the database, the user will get logged in to his/hers account.
 - The Log-In page also contains a footer section in the bottom of the page. 
@@ -82,16 +85,19 @@
 ### About Us Page
 
 ### Contact Page
+<a href="" target="_blank"><img src="/images/Contact_us_therapy.png" alt="Book Bites mobile Screen"></a>
 
 - The contact page contains a contact form which contains a function that sends the details which the user added into the databse as well. 
 - The Contact page also contains a footer section in the bottom of the page. 
 
 ### Schedule Meetings
+<a href="" target="_blank"><img src="/images/Meetings.png" alt="Book Bites mobile Screen"></a>
 
 - The Schedule Meetings page contains a form which allows the user/client to send in a requested meetings. The request gets register in the database and the client support executive can then later contact the user from there.
 - The Scedhule Meetings page also contains a footer section in the bottom of the page. 
 
 ### View Meetings
+<a href="" target="_blank"><img src="/images/UX-LOVE_THERAPY.png" alt="Book Bites mobile Screen"></a>
 
 - The View Meetings page contains drop down menu contains a function, which finds all of the meetings requested by the logged in user. The user/client then receives a structured calendar for his/her requested bookings. 
 - The View Meetings page also contains a footer section in the bottom of the page. 
@@ -99,22 +105,31 @@
 
 
 ### Edit Meetings
+<a href="" target="_blank"><img src="/images/UX-LOVE_THERAPY.png" alt="Book Bites mobile Screen"></a>
 
 - The View Meetings page contains a form, which contains the meeting's inputs that the user has requested. The Edit Meetings drop down selection menu has a function, which lets the user edit the meeting that they have created. When updating the details in the form, the details with the same ID will be updated in the database as well.
 - The Edit Meetings page also contains a footer section in the bottom of the page. 
 
+### My Account
+<a href="" target="_blank"><img src="/images/My_Account.png" alt="Book Bites mobile Screen"></a>
+
+- The My Account page contains a card with extra selections for the user/client. The user/client is able to book a meeting, view his/her journal and even delete his/her account.
+- The Edit Meetings page also contains a footer section in the bottom of the page. 
 
 ### Journal
+<a href="" target="_blank"><img src="/images/My_Journal.png" alt="Book Bites mobile Screen"></a>
 
 - The Journal page contains a documentation form which allows the user/client to write and documentate about her/his day. It contains a function which registeres everything which has been posted in the database. This is something Therapists & Psychiatrist are using a lot when they are working with clients, and to digitize the procedure makes it a lot easier or both the user/client and the Therapist/Psychiatrist. 
 - The Journal page also contains a footer section in the bottom of the page. 
 
 ### View Journal
+<a href="" target="_blank"><img src="/images/UX-LOVE_THERAPY.png" alt="Book Bites mobile Screen"></a>
 
 - The View Journal page contains a drop down menu selector which lets the user/client to view the journal posts him/her have done. It also lets the Therpist/Psychiatrist to read what him/her have been writing. It gives a big benefit in the sessions between the client & the Therapist/Psychiatrist, because they both will be aware of where they should begin the conversation. 
 - The View Journal page also contains a footer section in the bottom of the page. 
 
 ### Footer
+<a href="" target="_blank"><img src="/images/Footer_Therapy.png" alt="Book Bites mobile Screen"></a>
 
 - The footer contains information about the company and the company behind the application. It also states very clearly, that the company does not have any social media.
 
