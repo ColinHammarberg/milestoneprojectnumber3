@@ -263,8 +263,15 @@
 4. Press enter and it should begin downloading accordingly.
 
 # CREDITS
+#### I would like to show my gratitude and thank multiple people for helping me out, but the major thank you goes to Erik Wibom and the tutor team at Code Institute. Thank you guys or helping me out when I were stuck at specific things in my coding process for this project. I appreciate it!
+
+- I used a lot of the things in my project that I have learned in the previous month or so, while coding along with the lessons. I tried to use most of the things that I have picked up and for that I would like to send my gratitute and appreciation to the Python lessons on Code Institute.
+- I would also like to show my gratitute to the "code along" mini project (made by code institute). I don't think that I have learned that much from a single project at anytime before. It was a big help in my process of coding this MileStone Project. I learned to manage the databases, jinja frameworking, enable and build user accounts and much more (which is the knowledge that I have used in this MileStone Project) and been focusing a lot on in different ways. Thank you Code Institute!
+- For my Framework, HTML (including the classes) & the JavaScript I used MaterializeCSS which has also been added as a script tag. It made the styling and frameworking relatively easy, or at least easier than without it. Thank you for creating an amazing tool MaterializeCSS team!
 
 # ACKNOWLEDGEMENTS
+- I would like to acknowledge Erik Wibom (Software Engineer) for helping me out whenever I get stuck. Instead of getting angry at myself and my code, I can always give Erik a call and he is always there to help me! Thank you once again Erik!
+- I would also like to acknowledge the tutor team at Code Institute for also helping me out whenever I get stuck. You guys rock! Thank you!
 
 # MEDIA & CONTENT
 
