@@ -71,13 +71,13 @@
 - The landing page also contains a footer section in the bottom of the page. 
 
 ### Register Page
-<a href="" target="_blank"><img src="/images/UX-LOVE_THERAPY.png" alt="Book Bites mobile Screen"></a>
+<a href="" target="_blank"><img src="/images/Register.png" alt="Book Bites mobile Screen"></a>
 
 - The register page contains a registration form with a function which registeres and ads the users deatils into mongodb.
 - The register page also contains a footer section in the bottom of the page. 
 
 ### Log-in Page
-<a href="" target="_blank"><img src="/images/UX-LOVE_THERAPY.png" alt="Book Bites mobile Screen"></a>
+<a href="" target="_blank"><img src="/images/Log-In.png" alt="Book Bites mobile Screen"></a>
 
 - The log-in page contains a log-in form which contains a function that finds out if the username, password and email address exists in the databse. If the user exists and matches with the one in the database, the user will get logged in to his/hers account.
 - The Log-In page also contains a footer section in the bottom of the page. 
@@ -97,7 +97,7 @@
 - The Scedhule Meetings page also contains a footer section in the bottom of the page. 
 
 ### View Meetings
-<a href="" target="_blank"><img src="/images/UX-LOVE_THERAPY.png" alt="Book Bites mobile Screen"></a>
+<a href="" target="_blank"><img src="/images/View_Meetings.png" alt="Book Bites mobile Screen"></a>
 
 - The View Meetings page contains drop down menu contains a function, which finds all of the meetings requested by the logged in user. The user/client then receives a structured calendar for his/her requested bookings. 
 - The View Meetings page also contains a footer section in the bottom of the page. 
@@ -105,7 +105,7 @@
 
 
 ### Edit Meetings
-<a href="" target="_blank"><img src="/images/UX-LOVE_THERAPY.png" alt="Book Bites mobile Screen"></a>
+<a href="" target="_blank"><img src="/images/Update_Meeting.png" alt="Book Bites mobile Screen"></a>
 
 - The View Meetings page contains a form, which contains the meeting's inputs that the user has requested. The Edit Meetings drop down selection menu has a function, which lets the user edit the meeting that they have created. When updating the details in the form, the details with the same ID will be updated in the database as well.
 - The Edit Meetings page also contains a footer section in the bottom of the page. 
@@ -123,7 +123,7 @@
 - The Journal page also contains a footer section in the bottom of the page. 
 
 ### View Journal
-<a href="" target="_blank"><img src="/images/UX-LOVE_THERAPY.png" alt="Book Bites mobile Screen"></a>
+<a href="" target="_blank"><img src="/images/View_Journal.png" alt="Book Bites mobile Screen"></a>
 
 - The View Journal page contains a drop down menu selector which lets the user/client to view the journal posts him/her have done. It also lets the Therpist/Psychiatrist to read what him/her have been writing. It gives a big benefit in the sessions between the client & the Therapist/Psychiatrist, because they both will be aware of where they should begin the conversation. 
 - The View Journal page also contains a footer section in the bottom of the page. 
@@ -132,6 +132,11 @@
 <a href="" target="_blank"><img src="/images/Footer_Therapy.png" alt="Book Bites mobile Screen"></a>
 
 - The footer contains information about the company and the company behind the application. It also states very clearly, that the company does not have any social media.
+
+### Terms & Conditions
+<a href="" target="_blank"><img src="/images/Footer_Therapy.png" alt="Book Bites mobile Screen"></a>
+
+- The Terms & Condition page contains information about how the company/application handles personal details etc.
 
 ### Features left to implement
 
