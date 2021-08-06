@@ -16,7 +16,9 @@
 
 # REASONS FOR DEVELOPMENT
 
-### I (Colin Hammarberg) am developing/building this application for the therapist and the society circulating around it. Currently therapist and psychotrists centers usually offer a very limited and difficult structure for their clients. Especially in the smaller cities all around the world. I am one of those people who feel that the structure could improve a lot with the therapists and psychotrists. All communication, booking, feedback and content are today handled through email and a piece of physical paper. This application will help the clients of "Improvement Therapy & Psychiatrist Centre" to receive a better and functional structure. At least I will be using it with my therapist instead of emailing back and fourth all the time. 
+### I (Colin Hammarberg) am developing/building this application for the therapist and the society circulating around it. Currently therapist and psychotrists centers usually offer a very limited and difficult structure for their clients. Especially in the smaller cities all around the world. I am one of those people who feel that the structure could improve a lot with the therapists and psychotrists. All communication, booking, feedback and content are today handled through email and a piece of physical paper. This application will help the clients of "Improvement Therapy & Psychiatrist Centre" to receive a better and functional structure. At least I will be using it with my therapist instead of emailing back and fourth all the time.
+
+<a href="" target="_blank"><img src="/images/UX-LOVE_THERAPY.png" alt="Book Bites mobile Screen"></a>
 
 # TECHNOLOGIES USED 
  
@@ -121,8 +123,6 @@
 * In the future I would like to integrate SPCE (Digital meeting platform) onto the application and that the client automatically receives an account when creating an account on Love Therapy. It would be easier for the client to have digital meetings then.
 * I would also like to implement a direct booking system which shows when there are available slots and that triggers an automatic text message and email which should be sent to the client when completing a booking. 
 
-# MEDIA & CONTENT
-
 <br>
 <br>
 
@@ -176,17 +176,94 @@
 * I have conducted tests by creating a new user while checking if it has been added into the accurate (users) folder in my mongo database. I have also made sure of that it automatically logs the new user in, without having to log-in again.
 * Even here, I have ben testing the navigation bar to see that everything works fine.
 
+#### Journal Page (Macbook Air M1 + External Screen)
+* The Journal page contains a form and a dropdown menu selector which allows the user/client to document about their days. It contains a function that inserts the data into the mongo database in the folder "diary".
+* I have conducted tests with inserting different selections and different kind of data and have been checking so that it inserts the exact right data, in the exact right folder.
+* Even here, I have ben testing the navigation bar to see that everything works fine.
 
+#### View Journal Page (Macbook Air M1 + External Screen)
+* The View Journal page is only available from the extra selections on the My Account page. The button will lead the user/client to the View Journal page. 
+* The View Journal page contains a function that finds all and displays all posts made by the logged in user/client. This have been tested multiple times and have been working every since the function was created.
+* Even here, I have ben testing the navigation bar to see that everything works fine.
 
+#### Overall testing
+* I have also tested the application with connecting 5 devices at the same time. Just to make sure that nothing would crash. It worked fine.
+* I have also tested the application with logging in 5 different users/clients on 5 different devices at the same time. Just to make sure that nothing would crash. It worked fine.
 
+#### Responsiveness (Mobile & Ipad Pro Screens)
+* The application is responsiveness and framework has also been tested on all pages using both the inspect selection through Google Chrome and on the actual devices.
 
+<br>
+<br>
 
+# CODE VALIDATOR
+* The code has been searched for errors through different validators, to make sure that the code is stable and accurate.
+- Python (https://extendsclass.com/python-tester.html)
+- HTML (https://validator.w3.org/)
+- CSS (https://jigsaw.w3.org/css-validator/)
+- JavaScript Validator (https://jshint.com/)
+- Please note that when I ran the HTML & CSS code through https://validator.w3.org/ & https://jigsaw.w3.org/css-validator/ it demonstrated warnings (which came from one of the script tags). This is not something that I have corrected, because in my opinion it did not harm the application in any way.
 
+# UNFIXED BUGS 
+* One bug that I have not taken care of yet is redirecting page when updating an appointment. Will get to fixing that bug shortly.
 
+# DEPLOYMENT
+* The site was deployed to Heroku. These are the steps that I followed to deploy my application:
+- In the GitHub terminal, I created a requirements.txt file by running the command (pip3 freeze --local > requirements.txt). 
+- In the Github terminal, I created a Procfile by running the command (echo web: python app.py > Procfile)
+- Next I went on to my Heroku account and created a new app, by clicking the button "New App" and added the information needed.
+- Next I clicked on the button "Reaveal Config Vars" in my settings and added the values existed in the env.py file (IP, PORT, MONGO_DBNAME, MONGO_URI & SECRET_KEY). This will let Heroku access to those needed values.
+- Next I went back to the deploy page in my account and clicked on "Connect to Github". I chose the correct repository and allowed access to it from my Heroku account.
+- Next I clicked on the button "Enable Automatic Deploys". Which makes Heroku to deploy a new version directly when commiting the code in my repository.
+- Next I clicked on the button "Deploy Branch".
+- After the branch had been deployed, I clicked on the button "View" to view my application in another window.
 
+# PUSH TO GITHUB
 
+* The entire code has been written on GitPod and later on pushed to GitHub.
+* When I push my code to GitHub from GitPod I'm writing five different steps in my terminal. 
+1. The first step that I always do is to save the code (by pressing "save all"). 
+2. The second step that I always do is to run "git status". This gives me an overview of which files I have left to push and save to GitHub. 
+3. The third step that I always do is to run "git add" and then followed by the file or folder that I would like to add. 
+4. The fourth step that I always do is to run "git commit -m "Here I write a comment. So that my commits to GitHub are well documented along the way. That makes it a a lot easier to locate which commit I have been making when looking back at them".
+5. The fifth and last step that I always run in my terminal is just a simple "git push". This takes all of the files that I have added and then afterwards commited and pushes them all to GitHub (where the files and all of the code will be stored in a proper way).
+
+# CLONING
+
+### Cloning Github Code by downloading ZIP code
+* If you wish to clone my code (which is a public published code) you are free to do so. Please follow the steps down below to accomplish the cloning procedure:
+1. Copy this link and place it in a new window (https://github.com/ColinHammarberg/milestoneprojectnumber3). 
+2. Click on the "Code" button and select "HTTPS" to get the required options for cloning. 
+3. Click on the "Download ZIP" to download the code files. 
+
+### Cloning Github code by terminal
+1. Copy this link and place it in a new window (https://github.com/ColinHammarberg/milestoneprojectnumber3). 
+2. Click on the "Code" button and select "GitHub CLI" to get the required options for cloning. 
+3. Copy the text "gh repo clone ColinHammarberg/MS2" and place it in your terminal. 
+4. Press enter and it should begin downloading accordingly.
+
+# CREDITS
+
+# ACKNOWLEDGEMENTS
+
+# MEDIA & CONTENT
 
 ### Landing page (https://cdn.dribbble.com/users/388048/screenshots/2303293/therapist.gif)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
