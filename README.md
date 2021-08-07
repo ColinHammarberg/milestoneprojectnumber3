@@ -141,7 +141,8 @@
 ### Features left to implement
 
 * In the future I would like to integrate SPCE (Digital meeting platform) onto the application and that the client automatically receives an account when creating an account on Love Therapy. It would be easier for the client to have digital meetings then.
-* I would also like to implement a direct booking system which shows when there are available slots and that triggers an automatic text message and email which should be sent to the client when completing a booking. 
+* I would also like to implement a direct booking system which shows when there are available slots and that triggers an automatic text message and email which should be sent to the client when completing a booking.
+* I am also going to develop a seperate site which will include lots of articles about the centre. There is a button called "Read More" which is not connected yet, but it will be connected to a seperate site with lots of informational articles about the centre.
 
 <br>
 <br>
