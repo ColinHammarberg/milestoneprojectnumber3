@@ -1,6 +1,6 @@
 # LOVE THERAPY
  
-### The Love Therapy application was created for the clients of the Love Therapy center, which is being run by DR. Edward. The application helps the clients to get a better structure on their bookings, meetings, keeping contact with Dr. Edward and being able to search up different content stored in the database.
+### The Love Therapy application was created for the clients of the Improvement Therapy & Psychiatrist Centre, which is owned by DR. Edward. The application helps the clients to get a better structure on their bookings, meetings, keeping contact with the centre and being able to document about how they are doing and feeling in their ordinary weekdays. 
 
 
 # UX
