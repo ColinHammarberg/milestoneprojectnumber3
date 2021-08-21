@@ -65,7 +65,7 @@
 - This nav bar will allow the user to easily find him or herself all around the application. As does the mobile navigation slide out (which comes out from the right side when the user activates it by clicking the hamburger icon).
 
 ### Landing Page
-<a href="" target="_blank"><img src="/images/Landing_page_therapy.png" alt="Book Bites mobile Screen"></a>
+<a href="" target="_blank"><img src="/images/Landing.png" alt="Book Bites mobile Screen"></a>
 
 - The landing page contains a navigation bar, a Gif with some cool effects, and about us section in between the Gifs and a footer section which contains more information about the application and its therapy centre/application.
 - The landing page also contains a footer section in the bottom of the page. 
@@ -81,8 +81,6 @@
 
 - The log-in page contains a log-in form which contains a function that finds out if the username, password and email address exists in the databse. If the user exists and matches with the one in the database, the user will get logged in to his/hers account.
 - The Log-In page also contains a footer section in the bottom of the page. 
-
-### About Us Page
 
 ### Contact Page
 <a href="" target="_blank"><img src="/images/Contact_us_therapy.png" alt="Book Bites mobile Screen"></a>
@@ -101,8 +99,6 @@
 
 - The View Meetings page contains drop down menu contains a function, which finds all of the meetings requested by the logged in user. The user/client then receives a structured calendar for his/her requested bookings. 
 - The View Meetings page also contains a footer section in the bottom of the page. 
-
-
 
 ### Edit Meetings
 <a href="" target="_blank"><img src="/images/Update_Meeting.png" alt="Book Bites mobile Screen"></a>
