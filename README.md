@@ -223,6 +223,7 @@
 
 # UNFIXED BUGS 
 * One bug that I have not taken care of yet is redirecting page when updating an appointment. Will get to fixing that bug shortly.
+* Another bug is that I forgot to hide the env.py file in the beginning of the development. So the file is still viewable if you scroll down and look for the commits.
 
 # DEPLOYMENT
 * The site was deployed to Heroku. These are the steps that I followed to deploy my application:
