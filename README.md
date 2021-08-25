@@ -273,7 +273,7 @@
 
 # MEDIA & CONTENT
 
-### Landing page (https://cdn.dribbble.com/users/388048/screenshots/2303293/therapist.gif)
+### Landing page & My Account page(https://cyticlinics.com/wp-content/uploads/2021/03/online-therapy.gif)
 
 
 
