@@ -18,7 +18,7 @@
 
 ### I (Colin Hammarberg) am developing/building this application for the therapist and the society circulating around it. Currently therapist and psychotrists centers usually offer a very limited and difficult structure for their clients. Especially in the smaller cities all around the world. I am one of those people who feel that the structure could improve a lot with the therapists and psychotrists. All communication, booking, feedback and content are today handled through email and a piece of physical paper. This application will help the clients of "Improvement Therapy & Psychiatrist Centre" to receive a better and functional structure. At least I will be using it with my therapist instead of emailing back and fourth all the time.
 
-<a href="" target="_blank"><img src="/images/UX-LOVE_THERAPY.png" alt="Book Bites mobile Screen"></a>
+<a href="" target="_blank"><img src="/images/Ami-Design.png" alt="Book Bites mobile Screen"></a>
 
 # TECHNOLOGIES USED 
  
@@ -107,7 +107,7 @@
 - The Edit Meetings page also contains a footer section in the bottom of the page. 
 
 ### My Account
-<a href="" target="_blank"><img src="/images/My_Account.png" alt="Book Bites mobile Screen"></a>
+<a href="" target="_blank"><img src="/images/My-Account.png" alt="Book Bites mobile Screen"></a>
 
 - The My Account page contains a card with extra selections for the user/client. The user/client is able to book a meeting, view his/her journal and even delete his/her account.
 - The Edit Meetings page also contains a footer section in the bottom of the page. 
