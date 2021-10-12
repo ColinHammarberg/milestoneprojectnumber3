@@ -30,8 +30,7 @@ def register():
     if request.method == "POST":
         # This check if the user already exists in the databse
         existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
-            
+            {"username": request.form.get("username").lower()})          
         if existing_user:
             flash("Username already exists. Please choose another username.")
             return redirect(url_for("register"))
@@ -70,8 +69,7 @@ def signin():
                     existing_user["password"], request.form.get("password")):
                         session["user"] = request.form.get("username").lower()
                         flash("Welcome, {}".format(
-                            request.form.get("username")))
-                            
+                            request.form.get("username")))                            
                         return redirect(url_for(
                             "love_therapy", username=session["user"]))
 
@@ -142,7 +140,7 @@ def profile(username):
 
     return redirect(url_for("signin"))
 
-    # Lets the user/client contact and registers the email sent (by the form) directly into the database (function)
+    # Lets the user/client to contact
 
 
 @app.route("/contact", methods=["GET", "POST"])
@@ -160,7 +158,7 @@ def contact():
 
     return render_template("contact.html")
 
-    # Activates the button to bring the user/client to the terms & condition page
+    # Activates terms & conditions button
 
 
 @app.route("/terms", methods=["GET", "POST"])
@@ -176,7 +174,7 @@ def terms():
 @app.route("/delete_user/<user_id>")
 def delete_user(user_id):
     mongo.db.users.remove({"_id": ObjectId(user_id)})
-    flash("We are sad to see you leave, but you have successfully deleted your account")
+    flash("We are sad to see you leave")
     session.pop("user")
     return redirect(url_for("register"))
 
@@ -206,7 +204,7 @@ def edit_appointment(appointment_id):
             "made_by": session["user"]
         }
         mongo.db.appointments.update({"_id": ObjectId(appointment_id)}, submit)    
-        flash("You have successfully updated your booking. Your therapist will contact you shortly.")
+        flash("You have successfully updated your booking.")
 
     appointment = mongo.db.appointments.find_one(
         {"_id": ObjectId(appointment_id)})
@@ -242,6 +240,8 @@ def user_documentation():
     if request.method == "GET":
         diary = list(mongo.db.diary.find())
         return render_template("documentation.html", diary=diary)
+
+        
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

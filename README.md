@@ -14,6 +14,13 @@
 <a href="" target="_blank"><img src="/documentation/Ipad.png" alt="Book Bites mobile Screen"></a>
 <a href="" target="_blank"><img src="/documentation/Mobile.png" alt="Book Bites mobile Screen"></a>
 
+<br>
+
+# MONGODB DATABASE SCHEMA
+ <br>
+ <a href="" target="_blank"><img src="/documentation/Mongo-db-schema.png" alt="Book Bites mobile Screen"></a>
+
+
 # REASONS FOR DEVELOPMENT
 
 ### I (Colin Hammarberg) am developing/building this application for the therapist and the society circulating around it. Currently therapist and psychotrists centers usually offer a very limited and difficult structure for their clients. Especially in the smaller cities all around the world. I am one of those people who feel that the structure could improve a lot with the therapists and psychotrists. All communication, booking, feedback and content are today handled through email and a piece of physical paper. This application will help the clients of "Improvement Therapy & Psychiatrist Centre" to receive a better and functional structure. At least I will be using it with my therapist instead of emailing back and fourth all the time.
@@ -216,6 +223,8 @@
 # CODE VALIDATOR
 * The code has been searched for errors through different validators, to make sure that the code is stable and accurate.
 - Python (http://pep8online.com/)
+- The code is clear from errors. Still visible are three (3) warning signals, that I could't change.
+<a href="" target="_blank"><img src="/documentation/Pep8-check.png" alt="Book Bites mobile Screen"></a>
 - HTML (https://validator.w3.org/)
 - CSS (https://jigsaw.w3.org/css-validator/)
 - JavaScript Validator (https://jshint.com/)
