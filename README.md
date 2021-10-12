@@ -215,7 +215,7 @@
 
 # CODE VALIDATOR
 * The code has been searched for errors through different validators, to make sure that the code is stable and accurate.
-- Python (https://extendsclass.com/python-tester.html)
+- Python (http://pep8online.com/)
 - HTML (https://validator.w3.org/)
 - CSS (https://jigsaw.w3.org/css-validator/)
 - JavaScript Validator (https://jshint.com/)

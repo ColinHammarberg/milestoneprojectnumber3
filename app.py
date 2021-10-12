@@ -1,4 +1,3 @@
-
 import os
 from flask import (
     Flask, flash, render_template,
@@ -58,7 +57,6 @@ def register():
     return render_template("register.html")
 
 
-
 @app.route("/signin", methods=["GET", "POST"])
 def signin():
     if request.method == "POST":
@@ -87,11 +85,10 @@ def signin():
             flash("Incorrect Username and/or Password")
             return redirect(url_for("signin"))
 
-
     return render_template("signin.html")
 
-
 # Viewing your own bookings (function)
+
 
 @app.route("/appointments/", methods=["GET"])
 def user_appointments():
@@ -111,10 +108,12 @@ def logout():
 
 # Lets the user/client schedule a meeting (function)
 
+
 @app.route("/add_appointment", methods=["GET", "POST"])
 def add_appointment():
     if request.method == "POST":
-        digital_meeting = "yes" if request.form.get("digital_meeting") else "no"
+        digital_meeting = "yes" if request.form.get(
+            "digital_meeting") else "no"
         appointments = {
             "meeting_type": request.form.get("meeting_type"),
             "meeting_description": request.form.get("meeting_description"),
@@ -131,17 +130,20 @@ def add_appointment():
 
     # The application will find the username from the mongo database
 
+
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     user = mongo.db.users.find_one(
         {"username": session["user"]})
 
     if 'user' in session:
-        return render_template("profile.html", username=user['username'], user=user)
+        return render_template(
+            "profile.html", username=user['username'], user=user)
 
     return redirect(url_for("signin"))
 
     # Lets the user/client contact and registers the email sent (by the form) directly into the database (function)
+
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
@@ -158,8 +160,8 @@ def contact():
 
     return render_template("contact.html")
 
-
     # Activates the button to bring the user/client to the terms & condition page
+
 
 @app.route("/terms", methods=["GET", "POST"])
 def terms():
@@ -170,6 +172,7 @@ def terms():
 
     # Deletes the user from the database
 
+
 @app.route("/delete_user/<user_id>")
 def delete_user(user_id):
     mongo.db.users.remove({"_id": ObjectId(user_id)})
@@ -179,6 +182,7 @@ def delete_user(user_id):
 
     # Deletes appointment/booking from the database (Not yet completed)
 
+
 @app.route("/delete_appointment/<appointment_id>")
 def delete_appointment(appointment_id):
     mongo.db.appointments.remove({"_id": ObjectId(appointment_id)})
@@ -187,6 +191,7 @@ def delete_appointment(appointment_id):
 
     # The user/client should be able to change his booking (24 hours before
     #  the set time/date)
+
 
 @app.route("/edit_appointment/<appointment_id>", methods=["GET", "POST"])
 def edit_appointment(appointment_id):
@@ -203,10 +208,12 @@ def edit_appointment(appointment_id):
         mongo.db.appointments.update({"_id": ObjectId(appointment_id)}, submit)    
         flash("You have successfully updated your booking. Your therapist will contact you shortly.")
 
-    appointment = mongo.db.appointments.find_one({"_id": ObjectId(appointment_id)})
+    appointment = mongo.db.appointments.find_one(
+        {"_id": ObjectId(appointment_id)})
     return render_template("edit_appointment.html", appointment=appointment)
 
     # Documentation page (Client Diary)
+
 
 @app.route("/add_documentation", methods=["GET", "POST"])
 def add_documentation():
@@ -227,16 +234,15 @@ def add_documentation():
 
     return render_template("add_documentation.html")
 
-    # Lets the user/client view his/her added documentation inputs (Client Diary)
+    # Lets the user/client view his/her added documentation
+
 
 @app.route("/diary/", methods=["GET"])
 def user_documentation():
     if request.method == "GET":
         diary = list(mongo.db.diary.find())
         return render_template("documentation.html", diary=diary)
-
-        
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
