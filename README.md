@@ -234,16 +234,50 @@
 * One bug that I have not taken care of yet is redirecting page when updating an appointment. Will get to fixing that bug shortly.
 * Another bug is that I forgot to hide the env.py file in the beginning of the development. So the file is still viewable if you scroll down and look for the commits.
 
+<br>
+
 # DEPLOYMENT
-* The site was deployed to Heroku. These are the steps that I followed to deploy my application:
-- In the GitHub terminal, I created a requirements.txt file by running the command (pip3 freeze --local > requirements.txt). 
-- In the Github terminal, I created a Procfile by running the command (echo web: python app.py > Procfile)
-- Next I went on to my Heroku account and created a new app, by clicking the button "New App" and added the information needed.
-- Next I clicked on the button "Reaveal Config Vars" in my settings and added the values existed in the env.py file (IP, PORT, MONGO_DBNAME, MONGO_URI & SECRET_KEY). This will let Heroku access to those needed values.
-- Next I went back to the deploy page in my account and clicked on "Connect to Github". I chose the correct repository and allowed access to it from my Heroku account.
-- Next I clicked on the button "Enable Automatic Deploys". Which makes Heroku to deploy a new version directly when commiting the code in my repository.
-- Next I clicked on the button "Deploy Branch".
-- After the branch had been deployed, I clicked on the button "View" to view my application in another window.
+<br>
+
+### WHILE DEVELOPMENT
+<br>
+
+* The application was tested in an environment debug mode (Debug=True). The Debug mode is a great thing to have while developing. The reason for using DEBUG=True of debug mode is the displaying of detailed errors on the different pages.
+
+<br>
+<hr>
+
+### WHEN DEPLOYING TO HEROKU
+
+<br>
+
+* In the GitHub terminal, I created a requirements.txt file by running the command (pip3 freeze --local > requirements.txt) This is done to let Heroku know what requirements will be needed to run the application.
+
+<br>
+
+* In the Github terminal, I created a Procfile by running the command (echo web: python app.py > Procfile). The Procfile (according to <a>Heroku</a>) is a mechanism for declaring what commands are run by my application’s web dynos (lightweight Linux containers dedicated to running my application web processes) on the Heroku platform.
+
+<br>
+
+* I then logged in to my Heroku account and created the app (<a href="http://milestoneprojectnumber3.herokuapp.com/love_therapy">milestoneprojectnumber3</a>). I also linked my Github repository to receive automated deployment to my Heroku app when pushing my code to Github.
+
+<br>
+
+* Next I clicked on the button "Reaveal Config Vars" in my settings and added the values existed in the env.py file (IP, PORT, MONGO_DBNAME, MONGO_URI & SECRET_KEY). This will give Heroku access to those needed values.
+
+<br>
+
+* I then changed the "DEBUG=True" option in my app.py file to "DEBUG=False", which means that I changed the app environment.
+
+<br>
+
+* I requested the deployment from the branch master and reviewed the logs via the Heroku dashboard during the deployment. Once it was done deploying to Heroku, I tested so that everything had been deployed accordingly and to make sure everything worked smoothly.
+
+<br>
+
+<a href="http://milestoneprojectnumber3.herokuapp.com/love_therapy">Published version</a>
+
+<br>
 
 # PUSH TO GITHUB
 
