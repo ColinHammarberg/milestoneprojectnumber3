@@ -235,11 +235,30 @@ def add_documentation():
     # Lets the user/client view his/her added documentation
 
 
+
 @app.route("/diary/", methods=["GET"])
 def user_documentation():
     if request.method == "GET":
         diary = list(mongo.db.diary.find())
         return render_template("documentation.html", diary=diary)
+
+
+# 404
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+
+# 500
+
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    session.clear()
+    return render_template('500.html'), 500
+
 
         
 if __name__ == "__main__":
