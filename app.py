@@ -194,7 +194,8 @@ def delete_appointment(appointment_id):
 @app.route("/edit_appointment/<appointment_id>", methods=["GET", "POST"])
 def edit_appointment(appointment_id):
     if request.method == "POST":
-        digital_meeting = "yes" if request.form.get("digital_meeting") else "no"
+        digital_meeting = "yes" if request.form.get(
+            "digital_meeting") else "no"
         submit = {
             "meeting_type": request.form.get("meeting_type"),
             "meeting_description": request.form.get("meeting_description"),
@@ -235,7 +236,6 @@ def add_documentation():
     # Lets the user/client view his/her added documentation
 
 
-
 @app.route("/diary/", methods=["GET"])
 def user_documentation():
     if request.method == "GET":
@@ -259,8 +259,7 @@ def internal_server_error(e):
     session.clear()
     return render_template('500.html'), 500
 
-
-        
+      
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
